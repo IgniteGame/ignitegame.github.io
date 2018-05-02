@@ -15,6 +15,30 @@ body, .jumbotron, .navbar {
   font-family: Roboto, sans-serif;
   color: #333;
 }
+
+
+.logo-rgb {
+  margin-top: 12px;
+  height: 64px;
+  transition: transform 1s ease-out;
+  -webkit-transition: -webkit-transform 1s ease-out;
+}
+.logo-rgb:hover {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+}
+
+
+
+
+
+
+
+
+
+
+
 .form-control::-webkit-input-placeholder { color: #999; }  /* WebKit, Blink, Edge */
 .form-control:-moz-placeholder { color: #999; }  /* Mozilla Firefox 4 to 18 */
 .form-control::-moz-placeholder { color: #999; }  /* Mozilla Firefox 19+ */
@@ -42,7 +66,7 @@ img {
   -webkit-touch-callout: none;
 }
 .container-fluid:not(.navbar):not(footer) {
-padding: 75px 75px;
+  padding: 75px 75px;
 }
 
 /* alert */
@@ -124,6 +148,7 @@ label {
 }
 #card-blastbot {
   box-shadow: 5px 5px 5px 5px #333;
+  width: 360px;
 }
 
 /* JUMBOTRON */
@@ -279,6 +304,22 @@ footer .glyphicon:hover {
   }
   .jumbotron {
 	padding: 25px 25px;
+  }
+  h2 {
+    font-size: 150%;
+  }
+  h4 {
+    font-size: 150%;
+  }
+  p {
+    font-size: 125%;
+	line-height: 1.5;
+  }
+  .container-fluid:not(.navbar):not(footer) {
+    padding: 50px 25px;
+  }
+  #card-blastbot {
+    width: 270px;
   }
 }
   
