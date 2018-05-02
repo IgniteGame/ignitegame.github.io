@@ -125,6 +125,7 @@ label {
 
 /* JUMBOTRON */
 .jumbotron {
+  margin-bottom:0px! important;
   text-align: center;
   background-color: #991f1f; /* red */
   color: #fff;
