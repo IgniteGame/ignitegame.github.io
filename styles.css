@@ -41,8 +41,8 @@ img {
   user-drag: none;
   -webkit-touch-callout: none;
 }
-.container-fluid:not(.navbar .container-fluid) {
-  padding: 50px 50px;
+.container-fluid:not(.navbar):not(footer) {
+padding: 75px 75px;
 }
 
 /* alert */
@@ -121,6 +121,9 @@ hr {
 label {
   font-weight: normal;
   padding: 10px;
+}
+#card-blastbot {
+  box-shadow: 5px 5px 5px 5px #333;
 }
 
 /* JUMBOTRON */
