@@ -74,7 +74,12 @@ img {
   background-color: #f99;
   color: #991f1f;
 }
-
+#info-left {
+  text-align: right;	
+}
+#info-right {
+  text-align: left;
+}
 #backUsButton {
   color: #991f1f;
   padding: 25px;
@@ -283,7 +288,7 @@ footer .glyphicon:hover {
   }
 
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) { //small
   .col-sm-4 {
     text-align: center;
     margin: 25px 0;
@@ -309,6 +314,9 @@ footer .glyphicon:hover {
   }
   #card-blastbot, #card-back {
     width: 270px;
+  }
+  #info-left, #info-right {
+	text-align: center;
   }
 }
   
