@@ -16,7 +16,6 @@ body, .jumbotron, .navbar {
   color: #333;
 }
 
-
 .logo-rgb {
   margin-top: 12px;
   height: 64px;
@@ -28,16 +27,6 @@ body, .jumbotron, .navbar {
   -webkit-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
 }
-
-
-
-
-
-
-
-
-
-
 
 .form-control::-webkit-input-placeholder { color: #999; }  /* WebKit, Blink, Edge */
 .form-control:-moz-placeholder { color: #999; }  /* Mozilla Firefox 4 to 18 */
@@ -146,7 +135,7 @@ label {
   font-weight: normal;
   padding: 10px;
 }
-#card-blastbot {
+#card-blastbot, #card-back {
   box-shadow: 5px 5px 5px 5px #333;
   width: 360px;
 }
@@ -318,7 +307,7 @@ footer .glyphicon:hover {
   .container-fluid:not(.navbar):not(footer) {
     padding: 50px 25px;
   }
-  #card-blastbot {
+  #card-blastbot, #card-back {
     width: 270px;
   }
 }
