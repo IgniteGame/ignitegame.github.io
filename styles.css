@@ -16,6 +16,13 @@ body, .jumbotron, .navbar {
   color: #333;
 }
 
+#info-left .glyphicon, #info-right .glyphicon {
+  transition: all .1s ease-in-out;
+}
+#info-left .glyphicon:hover, #info-right .glyphicon:hover {
+  transform: scale(1.5);
+}
+
 .logo-rgb {
   margin-top: 12px;
   height: 64px;
