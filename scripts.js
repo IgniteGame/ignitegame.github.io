@@ -20,7 +20,7 @@ $(document).ready(function(){
   
   //Smooth scrolling from navbar from w3 schools
   // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#pageBody']").on('click', function(event) {
+  $(".navbar a, footer a[href='#home']").on('click', function(event) {
 
    // Make sure this.hash has a value before overriding default behavior
   if (this.hash !== "") {
