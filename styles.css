@@ -66,7 +66,7 @@ img {
 }
 
 .form-control:focus, input:focus, button:focus, a:focus {
-  border-color: #cba029 !important;
+  border-color: #cba029 !important; /* yellow */
   border-width: 2px !important;
   outline: 0 !important;
 }

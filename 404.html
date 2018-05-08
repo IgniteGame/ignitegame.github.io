@@ -42,15 +42,21 @@
 	padding: 100px 0;
 	font-size: 200%;
   }
-  .btn {
+  #takeMeHome {
     padding: 50px;
 	font-size: 200%;
+  }
+  #contactButton {
+       padding: 25px;
+  font-size: 100%; 
   }
   #error404 {
     font-size: 500%;
   }
   .fa-cog {
     font-size: 75%;
+  } a, a:hover, a:focus, .glyphicon-envelope {
+    color: #991f1f;
   }
   </style>
  </head>
@@ -61,6 +67,10 @@
  <div class="fa-3x">
 
  </div>
- <button type="button" onclick="window.open('http://ignite.cards', '_self');" class="btn btn-default">Take me back <span class="fa fa-home"></span></button>
+ <button id="takeMeHome" type="button" onclick="window.open('http://ignite.cards', '_self');" class="btn btn-default"><strong>Take me back </strong><span class="fa fa-home"></span></button>
+<p>Something wrong? Let us know at
+  <button id="contactButton" type="button" class="btn btn-default">
+  <a tabindex="-1" href="mailto:contact@ignite.cards">contact@ignite.cards</a> <span class="glyphicon glyphicon-envelope"></span></button>
+  </p>
  </body>
  </html>
