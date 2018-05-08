@@ -27,14 +27,20 @@
     padding: 50px;
 	font-size: 200%;
   }
+  #error404 {
+    font-size: 500%;
+  }
+  .fa-cog {
+    font-size: 75%;
+  }
   </style>
  </head>
  <body>
- <h1><strong>Ignite.cards</strong></h1>
- <h1>Error 404 - Looks like you've wandered too far from home</h1>
+ <h1><img src="assets/favicon-white.svg" onerror="this.onerror=null;this.src='assets/favicon-white.png';" width="24px"><strong> Ignite.cards</strong></h1>
+ <h1 id="error404">Error 4<i class="fas fa-cog fa-spin"></i>4 </h1><h3>(Page not found) <br><br> Looks like you've wandered too far from home</h3>
  <br>
  <div class="fa-3x">
- <i class="fas fa-cog fa-spin"></i>
+
  </div>
  <button type="button" onclick="window.open('http://ignite.cards', '_self');" class="btn btn-default">Take me back <span class="fa fa-home"></span></button>
  </body>
