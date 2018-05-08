@@ -65,6 +65,13 @@ img {
   padding: 75px 75px;
 }
 
+.form-control:focus, input:focus, button:focus, a:focus {
+  border-color: #cba029 !important;
+  border-width: 2px !important;
+  outline: 0 !important;
+}
+
+
 /* alert */
 .alert {
   border-radius: 0;	
@@ -141,7 +148,7 @@ hr {
 }
 .btn {
   border-radius: 0;
-  box-shadow: 2px 2px 2px #333; 	
+  box-shadow: 2px 2px 2px #333;
 }
 label {
   font-weight: normal;
@@ -150,6 +157,7 @@ label {
 #card-blastbot, #card-back {
   box-shadow: 5px 5px 5px 5px #333;
   width: 360px;
+  border-radius: 18px;
 }
 
 /* JUMBOTRON */
@@ -162,6 +170,9 @@ label {
 }
 
 /* NAVBAR */
+.navbar {
+box-shadow: 0 4px 4px 0px rgba(51,51,51,0.25); /*#333*/
+}
 .navbar, #navTitle {
   margin-bottom: 0;
   background-color: #991f1f;
@@ -321,6 +332,7 @@ footer .glyphicon:hover {
   }
   #card-blastbot, #card-back {
     width: 270px;
+    border-radius: 13.5px;
   }
   #info-left, #info-right {
 	text-align: center;

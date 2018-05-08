@@ -2,7 +2,6 @@
 $(document).ready(function(){
   
   
-  
  $('#subscribe').on('click', function() {
 	 console.log(document.getElementById('subscribeEmail').value);
   if(validateEmail(document.getElementById('subscribeEmail').value)) {
