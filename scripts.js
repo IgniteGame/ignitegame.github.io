@@ -1,6 +1,17 @@
 
 $(document).ready(function(){
-  
+
+
+  $(".fa-envelope").hover(
+       function(){ 
+       	$(this).addClass("fa-envelope-open"); 
+      	$(this).removeClass("fa-envelope"); 
+       },
+       function(){ 
+       	$(this).removeClass("fa-envelope-open"); 
+       	$(this).addClass("fa-envelope");
+       }
+  );
   
  $('#subscribe').on('click', function() {
 	 console.log(document.getElementById('subscribeEmail').value);
