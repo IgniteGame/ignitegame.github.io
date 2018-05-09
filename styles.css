@@ -41,10 +41,10 @@ body, .jumbotron, .navbar {
 .form-control:-ms-input-placeholder { color: #999; }  /* Internet Explorer 10-11 */
 .form-control::-ms-input-placeholder { color: #999; }  /* Microsoft Edge */
 ::-moz-selection { /* Code for Firefox */
-  background: #cba029; /* yellow */
+  background: #ccc; /* yellow */
 }
 ::selection {
-  background: #cba029; /* yellow */
+  background: #ccc; /* yellow */
 }
 .navbar {
   -webkit-user-select: none; /* Safari */        
