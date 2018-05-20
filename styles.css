@@ -154,7 +154,7 @@ label {
   font-weight: normal;
   padding: 10px;
 }
-#card-blastbot, #card-back {
+.gamecard {
   box-shadow: 5px 5px 5px 5px #333;
   width: 360px;
   border-radius: 18px;
@@ -312,7 +312,7 @@ footer .glyphicon:hover {
     margin: 25px 0;
   }
   .logo {
-    width: 200px;
+    width: 150px;
   }
   .jumbotron {
 	padding: 25px 25px;
@@ -330,7 +330,7 @@ footer .glyphicon:hover {
   .container-fluid:not(.navbar):not(footer) {
     padding: 50px 25px;
   }
-  #card-blastbot, #card-back {
+  .gamecard {
     width: 270px;
     border-radius: 13.5px;
   }

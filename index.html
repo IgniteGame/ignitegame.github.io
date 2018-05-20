@@ -150,24 +150,26 @@ https://www.youtube.com/channel/UC-yp5arUJMH2GeDmY12h6ZA
     </div>
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="nav navbar-nav">
-	  	<li><a tabindex="-1" href="#home"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
-        <li><a tabindex="-1" href="#about"><span class="glyphicon glyphicon-info-sign"></span> ABOUT</a></li>
-        <li><a tabindex="-1" href="#gameplay"><span class="glyphicon glyphicon-pawn"></span> GAMEPLAY</a></li>
-        <li><a tabindex="-1" href="#contact"><span class="glyphicon glyphicon-envelope"></span> CONTACT</a></li>
-        <!--
+	  	<li><a class="page-scroll" tabindex="-1" href="#home"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
+        <li><a class="page-scroll" tabindex="-1" href="#about"><span class="glyphicon glyphicon-info-sign"></span> ABOUT</a></li>
+        <li><a class="page-scroll" tabindex="-1" href="#gameplay"><span class="glyphicon glyphicon-pawn"></span> GAMEPLAY</a></li>
+        <li><a class="page-scroll" tabindex="-1" href="#contact"><span class="glyphicon glyphicon-envelope"></span> CONTACT</a></li>
+        
 		<li class="dropdown">
 		
 		
           <a tabindex="-1" class="dropdown-toggle" data-toggle="dropdown" href="#">MORE<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#"><span class="far fa-images"></span> GALLERY</a></li>
+            <li><a href="cards.html"><span class="far fa-images"></span> GALLERY</a></li>
+          <!--
             <li><a href="#"><span class="glyphicon glyphicon-star"></span> REVIEWS</a></li>
             <li><a href="#"><span class="far fa-arrow-alt-circle-down"></span> DOWNLOADS</a></li>
             <li><a href="#"><span class="fas fa-user-circle"></span> SUPPORTERS</a></li>
+          -->
           </ul>
 		  
         </li>
-		-->
+		
       </ul>
 	  <ul class="nav navbar-nav navbar-right">
 		<i class="fab fa-facebook-f" title="Facebook" onclick="window.open('https://www.facebook.com/ignitecard/')"></i>
@@ -261,7 +263,7 @@ https://www.youtube.com/channel/UC-yp5arUJMH2GeDmY12h6ZA
       <p>Command an army of <b>bots</b> and <b>forgelings</b> to destroy and take over your opponent’s <b>forge</b> <img src="assets/icon-forge.svg" width="24px"> before they destroy yours! In Ignos, <b>magical forges</b> leftover from wars past are scattered around the land. Use your forge’s <b>energy</b> <img src="assets/icon-energy.svg" width="24px"> to <b>summon minions</b> to attack, defend, and <b>ignite</b> <img src="assets/icon-flame.svg" width="24px"> for you. Set up your forgeling to tinker with your bots to produce insane combos. You'll need your forgeling’s mechanical skill and the luck of random ignition to destroy and conquer your opponent’s forge in this quick, action packed game.</p>
     </div>
     <div class="col-sm-4 text-center">
-	  <img title="Ignite Card Back" id="card-back" class="slideanim" src="assets/card-back.png">
+	  <img title="Ignite Card Back" id="card-back" class="gamecard slideanim" src="assets/card-back.png">
       <!--  <span class="glyphicon glyphicon-king logo slideanim"></span>  -->
     </div>
   </div>
@@ -275,7 +277,7 @@ https://www.youtube.com/channel/UC-yp5arUJMH2GeDmY12h6ZA
 	  <p>Each player is equipped with a 30 card forge <img src="assets/icon-forge.svg" width="24px"> full of minions. All minions have an energy cost <img src="assets/icon-energy.svg" width="24px">, attack <img src="assets/icon-wrench.svg" width="24px"> and health <img src="assets/icon-gear.svg" width="24px">, shown by lightning, wrench, and gear symbols respectively. "Bot" minions also have three ignite values shown in flaming stones. When you <b style="color:#991f1f;">IGNITE</b>, you roll two six-sided dice; one determines which target you hit and the other how much damage you deal, corresponding to the ignite values on the card. <img src="assets/icon-flame.svg" width="24px"> When minions attack, they deal damage equal to their attack value, and when they take damage, if they have no health they are destroyed. When a player takes damage they scrap that many cards, which means place that many cards from their forge into their scrapheap <img src="assets/icon-nut.svg" width="24px">. The scrapheap <img src="assets/icon-nut.svg" width="24px"> is also where dead minions go. Almost all of the deck is either bots that ignite, <img src="assets/icon-flame.svg" width="24px"> or forgelings (curious, evil gremlin creatures) that interact with bots and their ignite abilities. By attacking with your minions and igniting your bots, you can destroy your opponent's minions or destroy their forge <img src="assets/icon-forge.svg" width="24px"> and win the game!</p>
     </div>
 	<div class="col-sm-4 text-center">
-	  <img title="Blast Bot" id="card-blastbot" class="slideanim" src="assets/card-blastbot-blank.png">
+	  <img title="Blast Bot" id="card-blastbot" class="gamecard slideanim" src="assets/card-blastbot-blank.png">
       <!-- <span class="glyphicon glyphicon-queen logo slideanim"></span>  -->
     </div>
   </div>
@@ -314,7 +316,7 @@ https://www.youtube.com/channel/UC-yp5arUJMH2GeDmY12h6ZA
   </a>
   <br>
 <!--  <button type="button" class="btn btn-default"><span class="fas fa-share"></span> Share</button>  -->
-  <p>&copy; <img class="logo-rgb" src="assets/rgb-icon.svg" onerror="this.onerror=null;this.src='assets/rgb-icon.png';"> <a tabindex="-1" title="rgbstudios.org" href="http://rgbstudios.org">RGB Studios</a> 2018&nbsp;&nbsp;&nbsp;&nbsp;</p>
+  <p>&copy; <img class="logo-rgb" src="assets/rgb-icon.svg" onerror="this.onerror=null;this.src='assets/rgb-icon.png';"> <a tabindex="-1" title="rgbstudios.org" href="http://rgbstudios.org" target="_blank">RGB Studios</a> 2018</p>
 <!--  <a href="http://www.rgbstudios.org" title="Visit rgbstudios.org">rgbstudios.org</a> -->
 </footer>
 <iframe src="#" id="no-target" name="no-target" style="display:none;visibility:hidden">< /iframe>
