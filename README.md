@@ -1,6 +1,8 @@
 
 <div data-zebra="0">
   
+<img src="assets/icon.svg" width="256px">  
+  
 # [Ignite.cards](http://ignite.cards) - Ignite Official Website
 
 *Ignite is a quick and simple board game where players race to destroy each other's forges by timing the ignition of their bots within a battlefield of crazy combos and epic explosions.*
