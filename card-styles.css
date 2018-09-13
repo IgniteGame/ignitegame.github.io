@@ -1,11 +1,16 @@
 .jumbotron {
-  padding: 75px 5px 10px 5px !important;
+  padding: 75px 5px 5px 5px !important;
+}
+#cardDiv {
+  padding-top: 0;
+  padding-bottom: 40px;
 }
 .gamecard {
 	width: 270px !important;
 }
 #dots {
   text-align: center;
+  margin-top: 10px;
 }
 .slideshow-container {
   text-align: center;
