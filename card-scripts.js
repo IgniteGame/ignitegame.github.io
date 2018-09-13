@@ -30,6 +30,14 @@ $(document).ready(function(){
 
   showSlides(slideIndex);
 
+  cardDiv.on('swipeleft', function() {
+    plusSlides(-1);
+  });
+
+  cardDiv.on('swiperight', function() {
+    plusSlides(1);
+  });
+
 }) //end doc ready
 
 
