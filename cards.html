@@ -27,7 +27,7 @@ TODO
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
   
   <!--TODO: update bootstrap cdn to v4
@@ -66,49 +66,48 @@ TODO
   <div class="">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-		<span class="sr-only">Toggle navigation</span>
+    <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-	  <p id="navTitle" class="navbar-text">
-	    <img src="assets/favicon-white.svg" onerror="this.onerror=null;this.src='assets/favicon-white.png';" width="24px"> 
-	  Ignite.cards</p>
+    <p id="navTitle" class="navbar-text">
+      <img src="assets/favicon-white.svg" onerror="this.onerror=null;this.src='assets/favicon-white.png';" width="24px"> 
+    Ignite.cards</p>
     </div>
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="nav navbar-nav">
-        <!-- important: hrefs need to begin with "index.html" -->
-	  	<li><a class="page-scroll" tabindex="-1" href="index.html#home"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
-        <li><a class="page-scroll" tabindex="-1" href="index.html#about"><span class="glyphicon glyphicon-info-sign"></span> ABOUT</a></li>
-        <li><a class="page-scroll" tabindex="-1" href="index.html#gameplay"><span class="glyphicon glyphicon-pawn"></span> GAMEPLAY</a></li>
-        <li><a class="page-scroll" tabindex="-1" href="index.html#contact"><span class="glyphicon glyphicon-envelope"></span> CONTACT</a></li>
+      <li><a class="page-scroll" tabindex="-1" href="index.html#home"><i class="fas fa-home"></i> HOME</a></li>
+        <li><a class="page-scroll" tabindex="-1" href="index.html#about"><i class="fas fa-info-circle"></i> ABOUT</a></li>
+        <li><a class="page-scroll" tabindex="-1" href="index.html#gameplay"><i class="fas fa-chess-pawn"></i> GAMEPLAY</a></li>
+        <li><a class="page-scroll" tabindex="-1" href="index.html#contact"><i class="fas fa-envelope"></i> CONTACT</a></li>
         
-		<li class="dropdown">
-		
-		
-          <a tabindex="-1" class="dropdown-toggle" data-toggle="dropdown" href="#">MORE<span class="caret"></span></a>
+    <li class="dropdown">
+    
+    
+          <a tabindex="-1" class="dropdown-toggle" data-toggle="dropdown" href="#">MORE <i class="fas fa-caret-down"></i></a>
           <ul class="dropdown-menu">
-            <li><a href="#"><span class="far fa-images"></span> CARD GALLERY</a></li>
-          <!--            
+            <li><a href="cards.html"><i class="fas fa-images"></i> GALLERY</a></li>
+          <!--
             <li><a href="#"><span class="glyphicon glyphicon-star"></span> REVIEWS</a></li>
             <li><a href="#"><span class="far fa-arrow-alt-circle-down"></span> DOWNLOADS</a></li>
-            <li><a href="#"><span class="fas fa-user-circle"></span> SUPPORTERS</a></li> 
+            <li><a href="#"><span class="fas fa-user-circle"></span> SUPPORTERS</a></li>
           -->
           </ul>
-		  
+      
         </li>
-		
+    
       </ul>
-	  <ul class="nav navbar-nav navbar-right">
-		<i class="fab fa-facebook-f" title="Facebook" onclick="window.open('https://www.facebook.com/ignitecard/')"></i>
-		<i class="fab fa-twitter" title="Twitter" onclick="window.open('https://twitter.com/ignitecards')"></i>
-		<i class="fab fa-youtube" title="Youtube" onclick="window.open('https://www.youtube.com/channel/UC-yp5arUJMH2GeDmY12h6ZA')"></i>
-	<!--	<i class="fab fa-reddit-alien"></i>  -->
-		<i class="fab fa-discord" title="Discord" onclick="window.open('https://discord.gg/5enYaaa')"></i>
-	<!--	<i class="fab fa-kickstarter-k"></i> -->
-		<!--<i class="fab fa-amazon"></i>-->
-		<a href="mailto:contact@ignite.cards"><i class="fas fa-envelope" title="Email"></i></a>
-	  </ul>
+    <ul class="nav navbar-nav navbar-right">
+    <li><a class="page-scroll" tabindex="-1" href="https://www.facebook.com/ignitecard/"><i class="fab fa-facebook-f" title="Facebook"></i></a></li>
+    <li><a class="page-scroll" tabindex="-1" href="https://twitter.com/ignitecards"><i class="fab fa-twitter" title="Twitter"></i></a></li>
+    <li><a class="page-scroll" tabindex="-1" href="https://www.youtube.com/channel/UC-yp5arUJMH2GeDmY12h6ZA"><i class="fab fa-youtube" title="Youtube"></i></a></li>
+  <!--  <i class="fab fa-reddit-alien"></i>  -->
+    <li><a class="page-scroll" tabindex="-1" href="https://discord.gg/5enYaaa"><i class="fab fa-discord" title="Discord"></i></a></li>
+  <!--  <i class="fab fa-kickstarter-k"></i> -->
+    <!--<i class="fab fa-amazon"></i>-->
+    <li><a class="page-scroll" tabindex="-1" href="mailto:contact@ignite.cards"><i class="fas fa-envelope" title="Email"></i></a></li>
+    </ul>
     </div>
   </div>
 </nav>

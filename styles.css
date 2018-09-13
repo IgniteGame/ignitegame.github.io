@@ -15,24 +15,13 @@ body, .jumbotron, .navbar {
   font-family: Roboto, sans-serif;
   color: #333;
 }
-
-#info-left .glyphicon, #info-right .glyphicon {
-  transition: all .1s ease-in-out;
-}
-#info-left .glyphicon:hover, #info-right .glyphicon:hover {
-  transform: scale(1.5);
+i {
+  padding: 0 !important;
 }
 
 .logo-rgb {
   margin-top: 12px;
   height: 64px;
-  transition: transform 1s ease-out;
-  -webkit-transition: -webkit-transform 1s ease-out;
-}
-.logo-rgb:hover {
-  transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
 }
 
 .form-control::-webkit-input-placeholder { color: #999; }  /* WebKit, Blink, Edge */
@@ -205,11 +194,11 @@ box-shadow: 0 4px 4px 0px rgba(51,51,51,0.25); /*#333*/
 .navbar li a {
   color: #fff !important;
 }
-.navbar-nav li a:hover {
+.navbar-nav li a:hover, .navbar-nav li a:hover i {
   color: #991f1f !important;
   background-color: #fff !important;
 }
-.navbar-nav li.active a {
+.navbar-nav li.active a, .navbar-nav li.active a i {
   color: #991f1f !important;
   background-color: #fff !important;
 }
@@ -267,14 +256,16 @@ textarea {
 }
 
 /* FOOTER */
-footer .glyphicon {
+footer .fa-chevron-up {
   font-size: 25px;
   margin: 10px 0;
   color: #991f1f;
-  text-decoration: none !important;
 }
-footer .glyphicon:hover {
+footer .fa-chevron-up:hover {
   color: #333;
+}
+footer a {
+    text-decoration: none !important;
 }
 
 /* SCROLLBAR */
