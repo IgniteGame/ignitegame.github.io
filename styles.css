@@ -288,6 +288,11 @@ footer a {
     background: #666; 
 }
 
+/*sharethis*/
+.st-btn {
+  background-color: #991f1f !important;
+}
+
 /* @MEDIA */
 @media screen and (max-width: 1280px) {
   .navbar li a, .navbar i{
