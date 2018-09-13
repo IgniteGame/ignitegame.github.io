@@ -30,10 +30,10 @@ i {
 .form-control:-ms-input-placeholder { color: #999; }  /* Internet Explorer 10-11 */
 .form-control::-ms-input-placeholder { color: #999; }  /* Microsoft Edge */
 ::-moz-selection { /* Code for Firefox */
-  background: #ccc; /* yellow */
+  background: #ccc;
 }
 ::selection {
-  background: #ccc; /* yellow */
+  background: #ccc;
 }
 .navbar {
   -webkit-user-select: none; /* Safari */        
@@ -130,11 +130,18 @@ hr {
 }
 .btn-yellow {
   background-color: #cba029; /* yellow */
-  color: #fff;
+  color: #fff !important;
 }.btn-yellow:hover {
-  color:#fff;
   background-color:#cb7a29; /* orange */
 }
+
+.btn-red {
+  background-color: #991f1f; /* red */
+  color: #fff !important;
+}.btn-red:hover {
+  background-color:#333; /* black */
+}
+
 .btn {
   border-radius: 0;
   box-shadow: 2px 2px 2px #333;
@@ -151,7 +158,8 @@ label {
 
 /* JUMBOTRON */
 .jumbotron {
-  margin-bottom:0px! important;
+  margin-bottom: 0px !important;
+  padding-bottom: 0 !important;
   text-align: center;
   background-color: #991f1f; /* red */
   color: #fff;

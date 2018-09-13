@@ -6,7 +6,7 @@
 TODO
 -->
 
-  <title>Cards | Ignite.cards</title>
+  <title>Roller | Ignite.cards</title>
   
   <meta charset="utf-8">
   <meta name="title=" content="Ignite.cards">
@@ -65,8 +65,8 @@ TODO
 
 <!-- local links -->
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="card-styles.css">
-  <script src="card-scripts.js"></script>
+  <link rel="stylesheet" href="roller-styles.css">
+  <script src="roller-scripts.js"></script>
 
 </head>
 <body id="home" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -123,18 +123,20 @@ TODO
 </nav>
 
 <div class="jumbotron text-center">
-  <h1><img class="logo logo-game" src="assets/icon-thick.svg" onerror="this.onerror=null;this.src='assets/icon-thick.png';"><b>Ignite Card Gallery</b></h1>
+  <h1><img class="logo logo-game" src="assets/icon-thick.svg" onerror="this.onerror=null;this.src='assets/icon-thick.png';"><b>Ignite Roller</b></h1>
 </div> 
 
-<div id="cardDiv" class="slideshow-container container-fluid bg-grey">
-<!-- Next and previous buttons -->
-  <a class="prev" title="Previous" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" title="Next" onclick="plusSlides(1)">&#10095;</a>
-  
+
+
+<div class="text-center">
+  <br>
+<button id="rollButton" class="btn btn-lg btn-red"><img src="assets/favicon-white.svg" onerror="this.onerror=null;this.src='assets/favicon-white.png';" width="24px"> IGNITE!</button>
+<br>
+<img id="targetDie" class="img-die" src="">
+<img id="damageDie" class="img-die" src="">
 </div>
 
-<!-- slideshow dots -->
-<div id="dots"></div>
+
 
 <footer class="container-fluid text-center">
   <p>&copy; <img class="logo-rgb" src="assets/rgb-icon.svg" onerror="this.onerror=null;this.src='assets/rgb-icon.png';"> <a tabindex="-1" title="rgbstudios.org" href="http://rgbstudios.org" target="_blank">RGB Studios</a> 2018</p>
