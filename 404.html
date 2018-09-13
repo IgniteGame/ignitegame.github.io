@@ -62,26 +62,21 @@
   <style>
   body {
     background-color: #991f1f;
-	color: #fff;
-	font-family: Roboto, sans-serif;
-	text-align: center;
-
-	font-size: 150%;
+	  color: #fff;
+	  font-family: Roboto, sans-serif;
+	  text-align: center;
+	  font-size: 150%;
   }
   #takeMeHome {
-    padding: 25px;
-	font-size: 200%;
-  }
-  #contactButton {
-    padding: 25px;
-	font-size: 100%; 
+    padding: 20px;
+  	font-size: 200%;
   }
   #error404 {
     font-size: 400%;
   }
   .fa-cog {
     font-size: 75%;
-  } a, a:hover, a:focus, .fa-envelope {
+  } .fa-envelope, .fa-envelope-open {
     color: #991f1f;
   }
   </style>
@@ -91,7 +86,7 @@
  <br>
 <img src="assets/icon-thick-animated.svg" onerror="this.onerror=null;this.width='0px';" width="180px">
 
-<hr>
+
 
  <h1 id="error404">Error 4<i class="fas fa-cog fa-spin"></i>4 </h1><h3>Page not found</h3>
  <br>
@@ -102,7 +97,7 @@
  <button id="takeMeHome" type="button" onclick="window.open('http://ignite.cards', '_self');" class="btn btn-default"><strong>Take me back </strong><span class="fa fa-home"></span></button>
  <br><br><hr>
 <p>Something wrong? Let us know:<br>
-  <button id="contactButton" type="button" class="btn btn-default">
+  <button id="contactButton" type="button" class="btn btn-default btn-lg">
   <a tabindex="-1" href="mailto:contact@ignite.cards">contact@ignite.cards</a> <i class="fas fa-envelope"></i></button>
   </p>
  </body>
