@@ -28,7 +28,10 @@ $(document).ready(function(){
     dots.appendChild(dot);
   } //end for
 
-  showSlides(slideIndex);
+  //url params
+  let url = new URL(window.location.href);
+  let c = parseInt(url.searchParams.get("c") );
+  setSlide(c<=numCards&&c>=1 ? c : 1);
 
   $('#cardDiv').on('swipeleft', function() {
     plusSlides(-1);
@@ -68,12 +71,17 @@ function showSlides(n) {
   if (n < 1) {
     slideIndex = slides.length;
   }
-  for (i = 0; i < slides.length; i++) {
+
+  for (i=0; i<slides.length; i++) {
     slides[i].style.display = "none"; 
   }
-  for (i = 0; i < dots.length; i++) {
+  for (i=0; i<dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
+
+  //url params
+  history.replaceState({}, "", "?c=" + slideIndex);
 }
+  
