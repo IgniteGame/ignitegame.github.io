@@ -1,50 +1,30 @@
 let slideIndex = 1;
+const numCards = 15;
 
-$(document).ready(function(){
-  const numCards = 15;
-
-  let cardDiv = document.getElementById("cardDiv");
-  let dots = document.getElementById("dots");
-  for(let i = 1; i < numCards+1; i++) {
-    let slide = document.createElement("div");
-    slide.className = "card-slide";
-    
-    let numbertext = document.createElement("div");
-    numbertext.className = "numbertext";
-    numbertext.innerHTML = i + "/" + numCards;
-    slide.appendChild(numbertext);
-
-    let card = document.createElement("img");
-    card.className = "gamecard";
-    card.src = "assets/cards/" + i + ".svg";
-    // cardDiv.appendChild(card);
-    slide.appendChild(card);
-
-    cardDiv.appendChild(slide);
-
-    let dot = document.createElement("span");
-    dot.className = "dot";
-    dot.addEventListener("click", function(){ setSlide(i); } );
-    dots.appendChild(dot);
-  } //end for
+$(document).ready(function() {
+  
+  let cardDiv = $('#cardDiv');
+  let dots = $('#dots');
+  for(let i=1; i<numCards+1; i++) {
+    cardDiv.append('<div class="card-slide"><div class="numtext">'+i+'/'+numCards+'</div><img class="gamecard" src="assets/cards/'+i+'.svg"></div>');
+    dots.append('<span class="dot" onclick="setSlide('+i+')"></span>');
+  }
 
   //url params
   let url = new URL(window.location.href);
-  let c = parseInt(url.searchParams.get("c") );
+  let c = parseInt(url.searchParams.get('c') );
   setSlide(c<=numCards&&c>=1 ? c : 1);
 
-  $('#cardDiv').on('swipeleft', function() {
+  cardDiv.on('swipeleft', function() {
     plusSlides(-1);
   });
-
-  $('#cardDiv').on('swiperight', function() {
+  cardDiv.on('swiperight', function() {
     plusSlides(1);
   });
 
-}) //end doc ready
+});
 
-
-document.onkeyup = function(e) { //left and right arrow keys for slides
+document.onkeyup = function(e) { //left and right arrow keys
   let code = e.keyCode ? e.keyCode : e.which;
   if(code == 37) { //left
     plusSlides(-1);
@@ -62,26 +42,17 @@ function setSlide(n) { //dot controls
   showSlides(slideIndex = n);
 }
 function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("card-slide");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
-  } 
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
+  let slides = $('.card-slide');
+  let dots = $('.dot');
+  slideIndex = n>numCards ? 1 : n<1 ? numCards : n;
 
-  for (i=0; i<slides.length; i++) {
-    slides[i].style.display = "none"; 
-  }
-  for (i=0; i<dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  slides.css('display', 'none');
+  dots.removeClass('active');
+
+  $(slides[slideIndex-1]).css('display', 'block');
+  $(dots[slideIndex-1]).addClass('active');
 
   //url params
-  history.replaceState({}, "", "?c=" + slideIndex);
+  history.replaceState({}, '', '?c=' + slideIndex);
 }
   
