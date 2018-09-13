@@ -1,1 +1,3 @@
 add images
+add die roller
+update to bootstrap 4?

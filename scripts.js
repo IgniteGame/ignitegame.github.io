@@ -24,10 +24,6 @@ $(document).ready(function(){
   
   
   
-  
-  
-  
-  
   //Smooth scrolling from navbar from w3 schools
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar .page-scroll, footer a[href='#home']").on('click', function(event) {
