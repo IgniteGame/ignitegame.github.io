@@ -25,8 +25,8 @@ function roll() {
 
 function doRoll() {
 	rolls = [getRandom(6), getRandom(3)];
-	$('#targetDie').attr('src', 'assets/dice/' + targetImgs[rolls[0] ] + '.svg');
-	$('#damageDie').attr('src', 'assets/dice/' + damageImgs[rolls[1] ] + '.svg');
+	$('#targetDie').attr('src', '/assets/images/dice/' + targetImgs[rolls[0] ] + '.svg');
+	$('#damageDie').attr('src', '/assets/images/dice/' + damageImgs[rolls[1] ] + '.svg');
 }
 
 function getRandom(sides) {

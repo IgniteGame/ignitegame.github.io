@@ -11,6 +11,9 @@ black:		#333
 */
 
 /* GENERIC */
+html {
+  scroll-behavior: smooth;
+}
 body, .jumbotron, .navbar {  
   font-family: Roboto, sans-serif;
   color: #333;
@@ -18,6 +21,10 @@ body, .jumbotron, .navbar {
 i {
   padding: 0 !important;
 }
+
+/*.page-scroll {
+  margin: 0px !important;
+}*/
 
 .logo-rgb {
   margin-top: 12px;
@@ -159,7 +166,7 @@ label {
 /* JUMBOTRON */
 .jumbotron {
   margin-bottom: 0px !important;
-  padding-bottom: 0 !important;
+  padding-bottom: 25px !important;
   text-align: center;
   background-color: #991f1f; /* red */
   color: #fff;
@@ -168,7 +175,7 @@ label {
 
 /* NAVBAR */
 .navbar {
-box-shadow: 0 4px 4px 0px rgba(51,51,51,0.25); /*#333*/
+  box-shadow: 0 4px 4px 0px rgba(51,51,51,0.25); /*#333*/
 }
 .navbar, #navTitle {
   margin-bottom: 0;
@@ -188,14 +195,14 @@ box-shadow: 0 4px 4px 0px rgba(51,51,51,0.25); /*#333*/
   padding-bottom: 10px;  
 }
 .navbar i {
-  padding: 20px;
+  padding: 10px;
   font-size: 25px;
   text-align: center;
   color: #fff;
   background-color: #991f1f;
 }
-.navbar i:hover {
-  color: #991f1f;
+.navbar i:hover, .navbar .active, .navbar .active i {
+  color: #991f1f !important;
   background-color: #fff;
   cursor: pointer;
 }
@@ -214,7 +221,7 @@ box-shadow: 0 4px 4px 0px rgba(51,51,51,0.25); /*#333*/
   color: #fff !important;	
   background-color: #991f1f !important;	
 }
-.dropdown-menu{
+.dropdown-menu {
   background-color: #991f1f;
   border-radius: 0;
   margin:0;
@@ -266,16 +273,18 @@ textarea {
 }
 
 /* FOOTER */
+footer {
+  /*background-color: #991f1f;*/
+  /*color: #fff;*/
+}
 footer .fa-chevron-up {
   font-size: 25px;
-  margin: 10px 0;
-  color: #991f1f;
+  /*color: #fff;*/
+  margin-top: 10px;
 }
-footer .fa-chevron-up:hover {
-  color: #333;
-}
-footer a {
-    text-decoration: none !important;
+footer a, footer a:hover {
+  /*text-decoration: none !important;*/
+  /*color: #fff;*/
 }
 
 /* SCROLLBAR */
@@ -299,6 +308,9 @@ footer a {
 /*sharethis*/
 .st-btn {
   background-color: #333 !important;
+}
+.st-label, .st-shares {
+  color: #fff !important;
 }
 
 /* @MEDIA */

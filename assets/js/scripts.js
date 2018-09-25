@@ -1,6 +1,7 @@
 
-$(document).ready(function(){
+$(document).ready(function() {
 
+  $(window).scroll();
 
   $(".fa-envelope").hover(
        function(){ 
@@ -22,46 +23,38 @@ $(document).ready(function(){
   }
 }); 
   
-  
-  
-  //Smooth scrolling from navbar from w3 schools
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar .page-scroll, footer a[href='#home']").on('click', function(event) {
-
-   // Make sure this.hash has a value before overriding default behavior
-  if (this.hash !== "") {
-
-    // Prevent default anchor click behavior
-    event.preventDefault();
-
-    // Store hash
-    var hash = this.hash;
-
-    // Using jQuery's animate() method to add smooth page scroll
-    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 900, function(){
-
-      // Add hash (#) to URL when done scrolling (default click behavior)
-      window.location.hash = hash;
-      });
-    } // End if
-  });
 
 })
 
 
-//slide animation from w3 schools
-$(window).scroll(function() {
-  $(".slideanim").each(function(){
-    var pos = $(this).offset().top;
 
-    var winTop = $(window).scrollTop();
+$(window).scroll(function() {
+  //slide animation from w3 schools
+  $(".slideanim").each(function(){
+    let pos = $(this).offset().top;
+
+    let winTop = $(window).scrollTop();
     if (pos < winTop + 600) {
       $(this).addClass("slide");
     }
   });
+
+  //make nav item active when scrolled to
+  //https://jsfiddle.net/cse_tushar/Dxtyu/141/
+  let scrollPos = $(document).scrollTop();
+  $('.page-scroll').each(function(idx) {
+    let currLink = $(this);
+    let refElement = $('#' + currLink.attr('href').split('#')[1] );
+    if (refElement.position().top <= scrollPos +100 && refElement.position().top + refElement.height() +100 > scrollPos) {
+        $('.page-scroll').removeClass('active');
+        currLink.addClass('active');
+    }
+    else{
+        currLink.removeClass('active');
+    }
+  });
+    
+
 });
 
 

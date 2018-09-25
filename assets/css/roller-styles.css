@@ -1,0 +1,13 @@
+#rollButton {
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 200% !important;
+}
+.img-die {
+  width: 128px;
+  height: 128px;
+}
+#desc {
+  color: #991f1f;
+  font-weight: 600;
+}

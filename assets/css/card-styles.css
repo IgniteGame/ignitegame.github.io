@@ -55,9 +55,9 @@
 }
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 5px;
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
   background-color: #ccc;
   border-radius: 50%;
   display: inline-block;

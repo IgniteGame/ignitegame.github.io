@@ -6,7 +6,7 @@ $(document).ready(function() {
   let cardDiv = $('#cardDiv');
   let dots = $('#dots');
   for(let i=1; i<numCards+1; i++) {
-    cardDiv.append('<div class="card-slide"><div class="numtext">'+i+'/'+numCards+'</div><img class="gamecard" src="assets/cards/'+i+'.svg"></div>');
+    cardDiv.append('<div class="card-slide"><div class="numtext">'+i+'/'+numCards+'</div><img class="gamecard" src="/assets/images/cards/'+i+'.svg"></div>');
     dots.append('<span class="dot" onclick="setSlide('+i+')"></span>');
   }
 

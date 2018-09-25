@@ -1,3 +1,14 @@
-add images
-add die roller
-update to bootstrap 4?
+TODO
+add about us
+add contents list
+embed trailer from youtube?
+add link to kickstarter
+add articles and carousel of reviews
+
+use jekyll, react, vue, angular... to build static site dynamically generate pages
+then add what's in the box, die roller, link to read the rules
+show image of board on front page
+about us where it explains who we are and how we've been designing ignite
+what we're doing differently section with link to read at top of front page
+
+add pricing, youtube how to play and reviews, and rules

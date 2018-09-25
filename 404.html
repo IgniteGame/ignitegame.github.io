@@ -1,71 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>404 | Ignite.cards</title>
-  <meta charset="utf-8">
-  <meta name="title=" content="Ignite.cards">
-  <meta name="robots" content="index, follow">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ignite is a quick and simple board game where players race to destroy each other's forges by timing the ignition of their bots within a battlefield of crazy combos and epic explosions!">
-  <meta name="keywords" content="ignite, board game, card game, kickstarter">
+---
+layout: default-layout
+---
 
-  <!-- Chrome, Firefox OS and Opera -->
-  <meta name="theme-color" content="#991f1f">
-  <!-- Windows Phone -->
-  <meta name="msapplication-navbutton-color" content="#991f1f">
-  <!-- iOS Safari -->
-  <meta name="apple-mobile-web-app-status-bar-style" content="#991f1f">
-  
-  
-  <!-- bootstrap, (w/ jquery, fontawesome) and roboto -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-
-  <!-- sharethis -->
-  <!-- <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5b99cbd8bc60cb00117ddc97&product=inline-share-buttons' async='async'></script> -->
-  
-  <!--TODO: update bootstrap cdn to v4
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>  
-  -->
-  
-  <!-- favicons (realfavicongenerator.net) -->
-<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-<link rel="manifest" href="assets/favicons/site.webmanifest">
-<link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#991f1f">
-<link rel="shortcut icon" href="assets/favicons/favicon.ico">
-<meta name="msapplication-TileColor" content="#991f1f">
-<meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
-<meta name="theme-color" content="#991f1f">
-
-<!-- facebook metadata (realfavicongenerator.net) -->
-<meta property="og:image:width" content="264">
-<meta property="og:image:height" content="264">
-<meta property="og:description" content="A game of crazy combos and epic explosions">
-<meta property="og:title" content="Ignite.cards">
-<meta property="og:image" content="assets/favicons/og-image.jpg">
-<meta property="og:url" content="http://ignite.cards">
-
-<!-- https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started?ref=frontendchecklist -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@ignitecards">
-<!-- <meta name="twitter:image" content="assets/favicons/banner-twitter.png"> -->
-
-  <!-- local links -->
-  <link rel="stylesheet" href="styles.css">
-  <script src="scripts.js"></script>
-  <style>
+<style>
   body {
     background-color: #991f1f;
 	  color: #fff;
-	  font-family: Roboto, sans-serif;
 	  text-align: center;
 	  font-size: 150%;
+  }
+  #animated-icon {
+    margin-top: 100px;
   }
   #takeMeHome {
     padding: 20px;
@@ -76,29 +21,21 @@
   }
   .fa-cog {
     font-size: 75%;
-  } .fa-envelope, .fa-envelope-open {
-    color: #991f1f;
   }
-  </style>
- </head>
- <body>
- <h1><img src="assets/favicon-white.svg" onerror="this.onerror=null;this.src='assets/favicon-white.png';" width="24px"> Ignite.cards</h1>
- <br>
-<img src="assets/icon-thick-animated.svg" onerror="this.onerror=null;this.width='0px';" width="180px">
+</style>
 
+<img id="animated-icon" src="{{ site.baseurl }}/assets/images/icon-thick-animated.svg" onerror="this.onerror=null;this.width='0px';" width="180px">
 
+<h1 id="error404">Error 4<i class="fas fa-cog fa-spin"></i>4 </h1><h3>Page not found</h3>
+<br>
 
- <h1 id="error404">Error 4<i class="fas fa-cog fa-spin"></i>4 </h1><h3>Page not found</h3>
- <br>
+<button id="takeMeHome" type="button" onclick="window.open('index.html', '_self');" class="btn btn-default"><strong>Take me back </strong><span class="fa fa-home"></span></button>
 
-
-
-
- <button id="takeMeHome" type="button" onclick="window.open('http://ignite.cards', '_self');" class="btn btn-default"><strong>Take me back </strong><span class="fa fa-home"></span></button>
- <br><br><hr>
-<p>Something wrong? Let us know:<br>
+<br><br><hr>
+<p>Something wrong? Let us know:
+  <br>
   <button id="contactButton" type="button" class="btn btn-default btn-lg">
-  <a tabindex="-1" href="mailto:contact@ignite.cards">contact@ignite.cards</a> <i class="fas fa-envelope"></i></button>
-  </p>
- </body>
- </html>
+  <a tabindex="-1" href="mailto:contact@ignite.cards">contact@ignite.cards</a>
+  <i class="fas fa-envelope"></i>
+  </button>
+</p>

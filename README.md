@@ -1,7 +1,7 @@
 
 <div data-zebra="0">
   
-<img src="assets/icon.svg" width="256px">  
+<img src="assets/images/icon.svg" width="256px">  
   
 # [Ignite.cards](http://ignite.cards) - Ignite Official Website
 
