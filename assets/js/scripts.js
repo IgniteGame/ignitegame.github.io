@@ -13,6 +13,11 @@ $(document).ready(function() {
        	$(this).addClass("fa-envelope");
        }
   );
+
+  $('#menuButton').on('click', function() {
+    $('#menuIcon').toggleClass('fa-bars');
+    $('#menuIcon').toggleClass('fa-times');
+  })
   
  $('#subscribe').on('click', function() {
 	 console.log(document.getElementById('subscribeEmail').value);

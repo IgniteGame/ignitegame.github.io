@@ -13,3 +13,23 @@ what we're doing differently section with link to read at top of front page
 
 add pricing, youtube how to play and reviews, and rules
 
+
+FINALIZED SITE:
+front page: box cover image, link to kickstarter, live goal progress?, video trailer
+below front page: reviews carousel, maybe some thing people tweeted with #ignitegame tag
+about us: article: who each of us are, fund to help us pursue our passion
+contents: whats in the boxes, the prices, and the tech specs on materials and dimens
+videos: link to all 3 (4?) videos: trailer, how to play, what we're doing different, (example game?)
+about the game: article on why the game is fun, what we're doing different, with video embed
+reviews: bunch of reviews
+rules: read the rules online, print for on the go, search for when a word pops up
+	show parts of a board, card, turn etc as large images and have contents section with quick links
+	faq with differences between igniting and attacking, other frequent mistakes
+tournament: download brackets, win/loss cards, matchmaking script
+card gallery: list of all cards with flavor/tips on playing them, search and sort cards
+scrapmetal: info about the deck what it comes with, how it plays, some photos, maybe a trailer
+arcana: ditto
+downloads: personal avatar or wallpaper with art
+gameplay articles: playing the game basics
+roller: roll dice online, make in unity for a cool web gl 3d die roller? make as an android app? link to app too?
+articles: link to all articles
