@@ -14,6 +14,14 @@ what we're doing differently section with link to read at top of front page
 add pricing, youtube how to play and reviews, and rules
 
 
+card gallery features:
+update BASE with art images and newer stats (copyright first?)
+display all in a grid
+draw sample hand
+search for cards (name, text, etc)
+deck stats (mana curve with bots and non bots)
+
+
 FINALIZED SITE:
 front page: box cover image, link to kickstarter, live goal progress?, video trailer
 below front page: reviews carousel, maybe some thing people tweeted with #ignitegame tag
