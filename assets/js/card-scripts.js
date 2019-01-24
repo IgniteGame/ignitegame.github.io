@@ -49,6 +49,8 @@ function showSlides(n) {
   slides.css('display', 'none');
   dots.removeClass('active');
 
+  $(slides[slideIndex-1]).animate({width:'show'},500);
+
   $(slides[slideIndex-1]).css('display', 'block');
   $(dots[slideIndex-1]).addClass('active');
 

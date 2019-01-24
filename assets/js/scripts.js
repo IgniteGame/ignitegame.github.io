@@ -1,17 +1,21 @@
 
-$(document).ready(function() {
+$(function() {
 
   $(window).scroll();
 
+  $('.flipcard').flip({
+    trigger: 'click'
+  });
+
   $(".fa-envelope").hover(
-       function(){ 
-       	$(this).addClass("fa-envelope-open"); 
-      	$(this).removeClass("fa-envelope"); 
-       },
-       function(){ 
-       	$(this).removeClass("fa-envelope-open"); 
-       	$(this).addClass("fa-envelope");
-       }
+    function(){ 
+   	  $(this).addClass("fa-envelope-open"); 
+  	  $(this).removeClass("fa-envelope"); 
+    },
+    function(){ 
+   	  $(this).removeClass("fa-envelope-open"); 
+   	  $(this).addClass("fa-envelope");
+    }
   );
 
   $('#menuButton').on('click', function() {
@@ -19,18 +23,16 @@ $(document).ready(function() {
     $('#menuIcon').toggleClass('fa-times');
   })
   
- $('#subscribe').on('click', function() {
-	 console.log(document.getElementById('subscribeEmail').value);
-  if(validateEmail(document.getElementById('subscribeEmail').value)) {
-    bootstrap_alert("Congrats! You're subscribed", true);
-  } else {
-	bootstrap_alert("Invalid Email. Account not subscribed", false);
-  }
-}); 
+  $('#subscribe').on('click', function() {
+    if(validateEmail(document.getElementById('subscribeEmail').value)) {
+      bootstrap_alert("Congrats! You're subscribed", true);
+    } else {
+      bootstrap_alert("Invalid Email. Account not subscribed", false);
+    }
+  }); 
   
 
-})
-
+});
 
 
 $(window).scroll(function() {

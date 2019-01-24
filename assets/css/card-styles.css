@@ -55,9 +55,9 @@
 }
 .dot {
   cursor: pointer;
-  height: 12px;
-  width: 12px;
-  margin: 0 6px;
+  height: 15px;
+  width: 15px;
+  margin: 0 8px;
   background-color: #ccc;
   border-radius: 50%;
   display: inline-block;
@@ -65,4 +65,12 @@
 }
 .active, .dot:hover {
   background-color: #666;
+}
+@media screen and (max-width: 768px) { /*small*/
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 6px;
+  }
+
 }

@@ -3,6 +3,8 @@ layout: default-layout
 active: Home
 ---
 
+<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
 <script src="{{ site.baseurl }}/assets/js/scripts.js"></script>
 
 <div id="home" class="jumbotron text-center">
@@ -77,7 +79,16 @@ active: Home
       <p>Command an army of <b>bots</b> and <b>forgelings</b> to destroy and take over your opponent’s <b>forge</b> <img src="{{ site.baseurl }}/assets/images/game-icons/icon-forge.svg" width="24px"> before they destroy yours! In Ignos, <b>magical forges</b> leftover from wars past are scattered around the land. Use your forge’s <b>energy</b> <img src="{{ site.baseurl }}/assets/images/game-icons/icon-energy.svg" width="24px"> to <b>summon minions</b> to attack, defend, and <b>ignite</b> <img src="{{ site.baseurl }}/assets/images/game-icons/icon-flame.svg" width="24px"> for you. Set up your forgeling to tinker with your bots to produce insane combos. You'll need your forgeling’s mechanical skill and the luck of random ignition to destroy and conquer your opponent’s forge in this quick, action packed game.</p>
     </div>
     <div class="col-lg-4 text-center">
-	  <img title="Ignite Card Back" id="card-back" class="gamecard slideanim" src="{{ site.baseurl }}/assets/images/cards/0.svg">
+      
+      <div class="flipcard">
+        <div class="front">
+          <img title="Blast Bot" class="gamecard slideanim" src="{{ site.baseurl }}/assets/images/cards/2.png">
+        </div>
+        <div class="back">
+      	  <img title="Ignite Card Back" id="card-back" class="gamecard slideanim" src="{{ site.baseurl }}/assets/images/cards/0.svg">
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
@@ -85,8 +96,15 @@ active: Home
 <div id="gameplay" class="container-fluid">
   <div class="row">
 	<div class="col-lg-4 text-center">
-	  <img title="Blast Bot" id="card-blastbot" class="gamecard slideanim" src="{{ site.baseurl }}/assets/images/cards/2.png">
+   <div class="flipcard">
+    <div class="front">
+      <img title="Reconstructor" class="gamecard slideanim" src="{{ site.baseurl }}/assets/images/cards/10.png">
     </div>
+    <div class="back">
+      <img title="Ignite Card Back" id="card-back" class="gamecard slideanim" src="{{ site.baseurl }}/assets/images/cards/0.svg">
+    </div>
+  </div>
+  </div>
     <div class="col-lg-8">
       <h2><i class="fas fa-chess-pawn"></i> GAMEPLAY</h2>
       <p>Players gain energy <img src="{{ site.baseurl }}/assets/images/game-icons/icon-energy.svg" width="24px"> each turn to summon minions from their hand. By carefully planning when you summon and attack with your minions you can create combos to maximize the number of explosions <img src="{{ site.baseurl }}/assets/images/game-icons/icon-flame.svg" width="24px">, occurring right at the perfect time. Explosions can hit your opponent’s minions or their forge <img src="{{ site.baseurl }}/assets/images/game-icons/icon-forge.svg" width="24px">. When a player runs out of cards in their forge <img src="{{ site.baseurl }}/assets/images/game-icons/icon-forge.svg" width="24px">, they lose.</p>
