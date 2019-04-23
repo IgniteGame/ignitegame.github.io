@@ -1,5 +1,6 @@
 TODO
 add about us
+add rules
 add contents list/in the box images of what the game comes with
 embed trailer from youtube?
 add link to kickstarter
@@ -40,3 +41,6 @@ downloads: personal avatar or wallpaper with art
 gameplay articles: playing the game basics
 roller: roll dice online, make in unity for a cool web gl 3d die roller? make as an android app? link to app too?
 articles: link to all articles
+
+
+jekyll serve --watch

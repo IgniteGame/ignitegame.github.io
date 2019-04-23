@@ -5,8 +5,6 @@ active: Home
 
 <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 
-<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
-
 <script src="{{ site.baseurl }}/assets/js/scripts.js"></script>
 
 <div id="home" class="jumbotron text-center">
@@ -41,48 +39,6 @@ active: Home
 	  <div id ="alertPlaceholder"></div>
   </form>
 </div> 
-
-<!-- a-frame game box -->
-<div id="a-frame-game-box">
-  <a-scene embedded loading-screen="dotsColor: #991f1f; backgroundColor: #333">
-
-    <!-- box images -->
-    <a-assets>
-      <img id="city" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
-      <img id="box-back" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/box/box-back.png">
-      <img id="box-front" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/box/box-front.png">
-      <img id="box-long-sides" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/box/box-long-sides.png">
-      <img id="box-short-sides" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/box/box-short-sides.png">
-    </a-assets>
-
-    <!-- the box -->
-    <!-- scale is 1 is 2in, so 7.5in is 3.75, 4.5 is 2.25, 1.5 is 0.75 -->
-    <a-entity rotation="0 0 0" 
-    animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 5000; easing: easeInOutBack">
-      <!-- front side -->
-      <a-image src="#box-front" position="0 0 0" rotation="0 0 0" width="3.75" height="2.25"></a-image>
-      <!-- back side -->
-      <a-image src="#box-back" position="0 0 -0.75" rotation="0 180 0" width="3.75" height="2.25"></a-image>
-
-      <!-- left side -->
-      <a-image src="#box-short-sides" position="-1.875 0 -0.375" rotation="0 90 90" width="2.25" height="0.75"></a-image>
-      <!-- right side -->
-      <a-image src="#box-short-sides" position="1.875 0 -0.375" rotation="0 90 90" width="2.25" height="0.75"></a-image>
-
-      <!-- top side -->
-      <a-image src="#box-long-sides" position="0 1.125 -0.375" rotation="-90 180 0" width="3.75" height="0.75"></a-image>
-        <!-- bottom side -->
-      <a-image src="#box-long-sides" position="0 -1.125 -0.375" rotation="-90 180 0" width="3.75" height="0.75"></a-image>
-    </a-entity>
-
-    <a-sky color="#333"></a-sky>
-
-    <a-entity rotation="0 -15 0">
-      <a-camera lock-controls position="0 0 3.5"></a-camera>
-    </a-entity>
-
-  </a-scene>
-</div>
 
 <!--
 <h2 class="text-center"><span class="glyphicon glyphicon-star"></span> REVIEWS</h2>

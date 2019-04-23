@@ -1,0 +1,141 @@
+---
+layout: default-layout
+title: Contents
+active: Contents
+permalink: /contents/
+---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/contents-styles.css">
+<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+
+<!-- a-frame game box -->
+<div id="a-frame-game-box">
+  <a-scene embedded loading-screen="dotsColor: #991f1f; backgroundColor: #333"
+  vr-mode-ui="enabled: false">
+
+    <!-- box images -->
+    <a-assets>
+      <img id="city" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
+      <img id="box-back" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/box/box-back.png">
+      <img id="box-front" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/box/box-front.png">
+      <img id="box-long-sides" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/box/box-long-sides.png">
+      <img id="box-short-sides" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/box/box-short-sides.png">
+    </a-assets>
+
+    <!-- the box -->
+    <!-- scale is 1 is 2in, so 7.5in is 3.75, 4.5 is 2.25, 1.5 is 0.75 -->
+    <a-entity rotation="0 0 0" 
+    animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 5000; easing: easeInOutBack">
+      <!-- front side -->
+      <a-image src="#box-front" position="0 0 0" rotation="0 0 0" width="3.75" height="2.25"></a-image>
+      <!-- back side -->
+      <a-image src="#box-back" position="0 0 -0.75" rotation="0 180 0" width="3.75" height="2.25"></a-image>
+
+      <!-- left side -->
+      <a-image src="#box-short-sides" position="-1.875 0 -0.375" rotation="0 90 90" width="2.25" height="0.75"></a-image>
+      <!-- right side -->
+      <a-image src="#box-short-sides" position="1.875 0 -0.375" rotation="0 90 90" width="2.25" height="0.75"></a-image>
+
+      <!-- top side -->
+      <a-image src="#box-long-sides" position="0 1.125 -0.375" rotation="-90 180 0" width="3.75" height="0.75"></a-image>
+        <!-- bottom side -->
+      <a-image src="#box-long-sides" position="0 -1.125 -0.375" rotation="-90 180 0" width="3.75" height="0.75"></a-image>
+    </a-entity>
+
+    <a-sky color="#333"></a-sky>
+
+    <!-- <a-entity rotation="0 -15 0"> -->
+      <a-camera position="0 0 3"></a-camera>
+    <!-- </a-entity> -->
+
+  </a-scene>
+</div>
+
+<div class="container-fluid bg-white text-center">
+  <h3>Game Box</h3>
+  <p>Specs:</p>
+  <p>Dimensions: 7.5 x 4.5 x 1.5 inch interior</p>
+  <p>Material: 1.5mm board</p>
+  <p>Finish: Matte laminated</p>
+  <p>Type: Telescopic (possible magnetic upgrade)</p>
+  <p>Specialty: possible spot UV</p>
+  <p>Organizer: possible 2 x 4 x 1 inch 1mm board box organizer</p>
+  <h5>Front:</h5>
+  <img title="Ignite Game Box Front" class="gamebox center" src="{{ site.baseurl }}/assets/images/box/box-front.png">
+  <h5>Back:</h5>
+  <img title="Ignite Game Box Back" class="gamebox center" src="{{ site.baseurl }}/assets/images/box/box-back.png">
+  <hr>
+
+  <h3>Game Board<sub> x2</sub></h3>
+  <p>Specs:</p>
+  <p>Dimensions: 10.5 x 7 inches</p>
+  <p>Material: 1.5mm board</p>
+  <p>Finish: Matte laminated</p>
+  <p>Type: Trifold</p>
+  <img title="Ignite Game Board" id="gameboard" class="center" src="{{ site.baseurl }}/assets/images/board/board.png">
+  <hr>
+
+  <h3>Ignite Decks<sub> x2</sub></h3>
+  <p>Specs:</p>
+  <p>Dimensions: 3.5 x 2.5 inches (poker size)</p>
+  <p>Material: 300gsm</p>
+  <p>Finish: Matte varnish (possible linen upgrade)</p>
+  <p>Packaging: 0.5 inch deep tuckbox matte varnish 300gsm</p>
+  <img title="Ignite Card Blast Bot" class="gamecard center" src="{{ site.baseurl }}/assets/images/cards/2.png">
+  <img title="Ignite Card Back" class="gamecard center" src="{{ site.baseurl }}/assets/images/cards/0.svg">
+  <p class="text-center">View all of the cards in the <a href="{{ site.baseurl }}/cards/"><i class="fas fa-images"></i> GALLERY</a>.</p>
+  <hr>
+
+  <h3>Ignite Dice<sub> x2</sub></h3>
+  <p>Specs:</p>
+  <p>Dimensions: 16mm (possibly 14mm)</p>
+  <p>Material: plastic (possibly resin)</p>
+  <p>Corners: rounded (possibly square)</p>
+  <p>Style: printed</p>
+  <h5>Damage Die:</h5>
+  <img title="Ignite Dice" class="dice center" src="{{ site.baseurl }}/assets/images/dice/small explosion.svg">
+  <img title="Ignite Dice" class="dice center" src="{{ site.baseurl }}/assets/images/dice/small explosion.svg">
+  <img title="Ignite Dice" class="dice center" src="{{ site.baseurl }}/assets/images/dice/medium explosion.svg">
+  <img title="Ignite Dice" class="dice center" src="{{ site.baseurl }}/assets/images/dice/medium explosion.svg">
+  <img title="Ignite Dice" class="dice center" src="{{ site.baseurl }}/assets/images/dice/large explosion.svg">
+  <img title="Ignite Dice" class="dice center" src="{{ site.baseurl }}/assets/images/dice/large explosion.svg">
+  <h5>Target Die:</h5>
+  <img title="Ignite Dice" class="dice center" src="{{ site.baseurl }}/assets/images/dice/slot 1.svg">
+  <img title="Ignite Dice" class="dice center" src="{{ site.baseurl }}/assets/images/dice/slot 2.svg">
+  <img title="Ignite Dice" class="dice center" src="{{ site.baseurl }}/assets/images/dice/slot 3.svg">
+  <img title="Ignite Dice" class="dice center" src="{{ site.baseurl }}/assets/images/dice/slot 4.svg">
+  <img title="Ignite Dice" class="dice center" src="{{ site.baseurl }}/assets/images/dice/forge.svg">
+  <img title="Ignite Dice" class="dice center" src="{{ site.baseurl }}/assets/images/dice/forge.svg">
+  <hr>
+
+  <h3>Energy<sub> x8</sub> and Damage Counters<sub> x12</sub></h3>
+  <p>Specs:</p>
+  <p>Dimensions: 0.75 inch diameter, 4 x 6 inch punchout board</p>
+  <p>Material: 1-2mm board</p>
+  <p>Finish: Varnish gloss</p>
+  <h5>Energy Counters:</h5>
+  <img title="Ignite Energy Counter" class="token center" src="{{ site.baseurl }}/assets/images/tokens/energy.png">
+  <img title="Ignite Energy Counter" class="token center" src="{{ site.baseurl }}/assets/images/tokens/energy.png">
+  <img title="Ignite Energy Counter" class="token center" src="{{ site.baseurl }}/assets/images/tokens/energy.png">
+  <img title="Ignite Energy Counter" class="token center" src="{{ site.baseurl }}/assets/images/tokens/energy.png">
+  <img title="Ignite Energy Counter" class="token center" src="{{ site.baseurl }}/assets/images/tokens/energy.png">
+  <img title="Ignite Energy Counter" class="token center" src="{{ site.baseurl }}/assets/images/tokens/energy.png">
+  <img title="Ignite Energy Counter" class="token center" src="{{ site.baseurl }}/assets/images/tokens/energy.png">
+  <img title="Ignite Energy Counter" class="token center" src="{{ site.baseurl }}/assets/images/tokens/energy.png"> 
+  <h5>Damage Counters:<sub> (double sided)</sub></h5>
+  <img title="Ignite Damage Counter" class="token center" src="{{ site.baseurl }}/assets/images/tokens/damage-1.png">
+  <img title="Ignite Damage Counter" class="token center" src="{{ site.baseurl }}/assets/images/tokens/damage-1.png">
+  <img title="Ignite Damage Counter" class="token center" src="{{ site.baseurl }}/assets/images/tokens/damage-1.png">
+  <img title="Ignite Damage Counter" class="token center" src="{{ site.baseurl }}/assets/images/tokens/damage-1.png">
+  <img title="Ignite Damage Counter" class="token center" src="{{ site.baseurl }}/assets/images/tokens/damage-2.png">
+  <img title="Ignite Damage Counter" class="token center" src="{{ site.baseurl }}/assets/images/tokens/damage-2.png">
+  <img title="Ignite Damage Counter" class="token center" src="{{ site.baseurl }}/assets/images/tokens/damage-2.png">
+  <img title="Ignite Damage Counter" class="token center" src="{{ site.baseurl }}/assets/images/tokens/damage-2.png">
+  <img title="Ignite Damage Counter" class="token center" src="{{ site.baseurl }}/assets/images/tokens/damage-3.png">
+  <img title="Ignite Damage Counter" class="token center" src="{{ site.baseurl }}/assets/images/tokens/damage-3.png">
+  <img title="Ignite Damage Counter" class="token center" src="{{ site.baseurl }}/assets/images/tokens/damage-3.png">
+  <img title="Ignite Damage Counter" class="token center" src="{{ site.baseurl }}/assets/images/tokens/damage-3.png">
+  <hr>
+
+  <br><br>
+</div>

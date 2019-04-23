@@ -1,0 +1,82 @@
+h3 {
+  font-size: 250%;
+  font-weight: bold;
+}
+h5 {
+  font-size: 150%;
+  margin-top: 20px;
+}
+p {
+  line-height: 2px;
+  text-align: left;
+  font-size: 125%;
+}
+
+hr {
+  width: 50%;
+}
+
+#gameboard, .gamebox, .gamecard {
+  box-shadow: 5px 5px 5px 5px #333;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+#gameboard, .gamebox {
+  width: 600px;
+}
+.gamecard {
+  width: 300px;
+  display: inline;
+  margin-right: 10px;
+}
+.dice, .token {
+  display: inline;
+  margin: 40px;
+}
+.dice {
+  width: 150px;
+}
+.token {
+  width: 100px;
+}
+
+#a-frame-game-box {
+  height: 400px;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+@media screen and (max-width: 768px) { /*small*/
+  #a-frame-game-box {
+    height: 200px;
+    /*display: none;*/
+  }
+
+  #gameboard, .gamebox, .gamecard {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #gameboard, .gamebox {
+    width: 300px;
+  }
+  .gamecard {
+    width: 150px;
+    margin-right: 5px;
+  }
+  .dice, .token {
+    margin: 20px;
+  }
+  .dice {
+    width: 75px;
+  }
+  .token {
+    width: 50px;
+  }
+
+  p {
+    line-height: 20px;
+  }
+
+
+}

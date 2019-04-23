@@ -330,15 +330,8 @@ footer a, footer a:hover {
   color: #fff !important;
 }
 
-#a-frame-game-box {
-  height: 400px;
-  text-align: center;
-  margin: 0px;
-  padding: 0px;
-}
-
 #gameboard {
-  width: 450px;
+  width: 600px;
 }
 .center {
   display: block;
@@ -358,9 +351,6 @@ footer a, footer a:hover {
 
 }
 @media screen and (max-width: 768px) { /*small*/
-  #a-frame-game-box {
-    display: none;
-  }
   #gameboard {
     width: 300px;
   }
