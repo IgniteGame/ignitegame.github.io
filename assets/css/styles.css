@@ -339,6 +339,15 @@ footer a, footer a:hover {
   margin-right: auto;
 }
 
+/*#home-inner-div {
+  background: rgba(153, 31, 31, 0) url(../images/artwork/molten-maniac-no-bg.png) no-repeat fixed center;
+  background-size: 479px 500px;
+}*/
+
+#molten-man {
+  width: 300px;
+}
+
 /* @MEDIA */
 @media screen and (max-width: 1280px) {
   .navbar li a, .navbar i{
@@ -404,13 +413,20 @@ footer a, footer a:hover {
   visibility:hidden;
 }
 .slide {
-  animation-name: slide;
-  -webkit-animation-name: slide;
+  animation-name: slideUp;
+  -webkit-animation-name: slideUp;
   animation-duration: 1s; 
   -webkit-animation-duration: 1s;
   visibility: visible;
 }
-@keyframes slide {
+.slideSide {
+  animation-name: slideLeftToRight;
+  -webkit-animation-name: slideLeftToRight;
+  animation-duration: 1s; 
+  -webkit-animation-duration: 1s;
+  visibility: visible; 
+}
+@keyframes slideUp {
   0% {
     opacity: 0;
     transform: translateY(75%);
@@ -420,7 +436,7 @@ footer a, footer a:hover {
     transform: translateY(0%);
   }
 }
-@-webkit-keyframes slide {
+@-webkit-keyframes slideUp {
   0% {
     opacity: 0;
     -webkit-transform: translateY(75%);
@@ -428,5 +444,26 @@ footer a, footer a:hover {
   100% {
     opacity: 1;
     -webkit-transform: translateY(0%);
+  }
+}
+
+@keyframes slideLeftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(75%);
+  } 
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes slideLeftToRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(75%);
+  } 
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
   }
 }

@@ -42,7 +42,12 @@ $(window).scroll(function() {
 
     let winTop = $(window).scrollTop();
     if (pos < winTop + 600) {
-      $(this).addClass("slide");
+      if($(this).hasClass("slideSideways") ) {
+        $(this).addClass("slideSide");
+      } else {
+        $(this).addClass("slide");        
+      }
+
     }
   });
 

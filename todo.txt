@@ -1,6 +1,8 @@
 TODO
 add about us
 add rules
+add slide animations to contents.html, add 3d models for dice and others to contents
+add artwork of blastbot popping out of the gameboard to main page or contents.html?
 add contents list/in the box images of what the game comes with
 embed trailer from youtube?
 add link to kickstarter
