@@ -335,6 +335,9 @@ footer a, footer a:hover {
   #a-frame-game-box {
     display: none;
   }
+  .logo-game {
+    margin-top: 30px;
+  }
   .col-sm-4 {
     text-align: center;
     margin: 25px 0;
