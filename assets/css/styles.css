@@ -18,8 +18,15 @@ body, .jumbotron, .navbar {
   font-family: Roboto, sans-serif;
   color: #333;
 }
+body {
+  background: #991f1f url(../images/board/board-art-small.png) no-repeat fixed center;
+}
 i {
   padding: 0 !important;
+}
+
+#home {
+/*  background: #991f1f url(../images/board/board-art-small.png) no-repeat fixed center;;*/
 }
 
 /*.page-scroll {
@@ -132,9 +139,16 @@ hr {
 .logo-game {
   width: 200px;	
 }
-.bg-grey {
-  background-color: #ccc;
+
+.container-fluid.bg-grey {
+  /*background-color: #ccc;*/
+  background-color: rgba(204,204,204,0.8);
 }
+.container-fluid.bg-white {
+  /*background-color: #fff*/
+  background-color: rgba(255,255,255,0.8);
+}
+
 .btn-yellow {
   background-color: #cba029; /* yellow */
   color: #fff !important;
@@ -158,9 +172,11 @@ label {
   padding: 10px;
 }
 .gamecard {
-  box-shadow: 5px 5px 5px 5px #333;
   width: 360px;
   border-radius: 18px;
+}
+.gamecard, #gameboard {
+  box-shadow: 5px 5px 5px 5px #333;
 }
 
 /* JUMBOTRON */
@@ -168,7 +184,8 @@ label {
   margin-bottom: 0px !important;
   padding-bottom: 25px !important;
   text-align: center;
-  background-color: #991f1f; /* red */
+  /*background-color: #991f1f; /* red */
+  background-color: rgba(153, 31, 31, 0.6); /* red */
   color: #fff;
   padding: 75px 25px;
 }
@@ -320,6 +337,15 @@ footer a, footer a:hover {
   padding: 0px;
 }
 
+#gameboard {
+  width: 450px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* @MEDIA */
 @media screen and (max-width: 1280px) {
   .navbar li a, .navbar i{
@@ -334,6 +360,9 @@ footer a, footer a:hover {
 @media screen and (max-width: 768px) { /*small*/
   #a-frame-game-box {
     display: none;
+  }
+  #gameboard {
+    width: 300px;
   }
   .logo-game {
     margin-top: 30px;
@@ -362,7 +391,7 @@ footer a, footer a:hover {
     padding: 50px 25px;
   }
   .gamecard {
-    width: 270px;
+    width: 180px;
     border-radius: 13.5px;
   }
   #info-left, #info-right {

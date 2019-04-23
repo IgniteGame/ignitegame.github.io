@@ -1,12 +1,11 @@
 TODO
 add about us
-add contents list
+add contents list/in the box images of what the game comes with
 embed trailer from youtube?
 add link to kickstarter
 add articles and carousel of reviews
 
-use jekyll, react, vue, angular... to build static site dynamically generate pages
-then add what's in the box, die roller, link to read the rules
+then add what's in the box, link to read the rules
 show image of board on front page
 about us where it explains who we are and how we've been designing ignite
 what we're doing differently section with link to read at top of front page
@@ -15,7 +14,7 @@ add pricing, youtube how to play and reviews, and rules
 
 
 card gallery features:
-update BASE with art images and newer stats (copyright first?)
+update BASE with art images and newer stats
 display all in a grid
 draw sample hand
 search for cards (name, text, etc)
