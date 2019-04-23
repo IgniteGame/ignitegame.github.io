@@ -313,6 +313,13 @@ footer a, footer a:hover {
   color: #fff !important;
 }
 
+#a-frame-game-box {
+  height: 400px;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
 /* @MEDIA */
 @media screen and (max-width: 1280px) {
   .navbar li a, .navbar i{
@@ -325,6 +332,9 @@ footer a, footer a:hover {
 
 }
 @media screen and (max-width: 768px) { /*small*/
+  #a-frame-game-box {
+    display: none;
+  }
   .col-sm-4 {
     text-align: center;
     margin: 25px 0;
