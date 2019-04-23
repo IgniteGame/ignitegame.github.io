@@ -39,7 +39,8 @@ tournament: download brackets, win/loss cards, matchmaking script
 card gallery: list of all cards with flavor/tips on playing them, search and sort cards
 scrapmetal: info about the deck what it comes with, how it plays, some photos, maybe a trailer
 arcana: ditto
-downloads: personal avatar or wallpaper with art
+digital downloads: personal avatar or wallpaper with art
+shop: buy shirts, bags, stickers, signed art
 gameplay articles: playing the game basics
 roller: roll dice online, make in unity for a cool web gl 3d die roller? make as an android app? link to app too?
 articles: link to all articles
