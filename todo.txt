@@ -47,3 +47,11 @@ articles: link to all articles
 
 
 jekyll serve --watch
+
+
+code for discord:
+  {
+    "name": "Discord",
+    "url": "https://discord.gg/5enYaaa",
+    "icon": "fab fa-discord"
+  },

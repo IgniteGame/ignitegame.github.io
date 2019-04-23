@@ -15,11 +15,6 @@
     "icon": "fab fa-youtube"
   },
   {
-    "name": "Discord",
-    "url": "https://discord.gg/5enYaaa",
-    "icon": "fab fa-discord"
-  },
-  {
     "name": "Email",
     "url": "mailto:contact@ignite.cards",
     "icon": "fas fa-envelope"
