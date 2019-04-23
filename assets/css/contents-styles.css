@@ -16,7 +16,7 @@ hr {
   width: 50%;
 }
 
-#gameboard, .gamebox, .gamecard {
+#gameboard, .gamebox, .gamecard, #rulebook {
   box-shadow: 5px 5px 5px 5px #333;
   margin-left: 40px;
   margin-right: 40px;
@@ -24,7 +24,7 @@ hr {
 #gameboard, .gamebox {
   width: 600px;
 }
-.gamecard {
+.gamecard, #rulebook {
   width: 300px;
   display: inline;
   margin-right: 10px;
@@ -53,14 +53,14 @@ hr {
     /*display: none;*/
   }
 
-  #gameboard, .gamebox, .gamecard {
+  #gameboard, .gamebox, .gamecard, #rulebook {
     margin-left: 20px;
     margin-right: 20px;
   }
   #gameboard, .gamebox {
     width: 300px;
   }
-  .gamecard {
+  .gamecard, #rulebook {
     width: 150px;
     margin-right: 5px;
   }
