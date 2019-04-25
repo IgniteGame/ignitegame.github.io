@@ -41,7 +41,7 @@ hr {
 }
 
 #a-frame-game-box {
-  height: 400px;
+  height: 500px;
   text-align: center;
   margin: 0px;
   padding: 0px;
@@ -49,7 +49,7 @@ hr {
 
 @media screen and (max-width: 768px) { /*small*/
   #a-frame-game-box {
-    height: 200px;
+    height: 250px;
     /*display: none;*/
   }
 

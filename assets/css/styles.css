@@ -184,10 +184,12 @@ label {
   margin-bottom: 0px !important;
   padding-bottom: 25px !important;
   text-align: center;
-  /*background-color: #991f1f; /* red */
-  background-color: rgba(153, 31, 31, 0.6); /* red */
   color: #fff;
   padding: 75px 25px;
+}
+.jumbotron, .bg-red {
+  /*background-color: #991f1f; /* red */
+  background-color: rgba(153, 31, 31, 0.6); /* red */
 }
 
 /* NAVBAR */
