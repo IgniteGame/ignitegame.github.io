@@ -99,22 +99,6 @@ img {
 }
 
 
-/* alert */
-.alert {
-  border-radius: 0;	
-  border: 0;	
-}
-.alert .close {
-  color: #333;	
-}
-.alert-success {
-  background-color: #9f9;
-  color: #1f991f;
-}
-.alert-danger {
-  background-color: #f99;
-  color: #991f1f;
-}
 #info-left {
   text-align: right;	
 }

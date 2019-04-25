@@ -21,16 +21,7 @@ $(function() {
   $('#menuButton').on('click', function() {
     $('#menuIcon').toggleClass('fa-bars');
     $('#menuIcon').toggleClass('fa-times');
-  })
-  
-  $('#subscribe').on('click', function() {
-    if(validateEmail(document.getElementById('subscribeEmail').value)) {
-      bootstrap_alert("Congrats! You're subscribed", true);
-    } else {
-      bootstrap_alert("Invalid Email. Account not subscribed", false);
-    }
-  }); 
-  
+  });  
 
 });
 
@@ -76,19 +67,4 @@ function sendEmail() {
   let comments = document.getElementById("comments").value.replace(" ", "%20").replace("\n", "%0D%0A");
   window.open("mailto:contact@ignite.cards?subject=Ignite.cards%20Contact%20Form&body=" + comments + "%0D%0A%0D%0A" + name + "%0D%0A%0D%0A" + email);
   console.log("Hi");	
-}
-
-
-bootstrap_alert = function(message, success) {
-	console.log(message);
-  $('#alertPlaceholder').html('<div class="alert alert-' + (success ? 'success' : 'danger') + ' alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><span>'+message+'</span></div>')
-}
-    
-
-
-
-//https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
-function validateEmail(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
 }
