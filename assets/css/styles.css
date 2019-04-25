@@ -160,6 +160,10 @@ hr {
   /*background-color: #fff*/
   background-color: rgba(255,255,255,0.8);
 }
+.container-fluid.bg-black {
+  /*background-color: #fff*/
+  background-color: rgba(51,51,51,0.5);
+}
 
 .btn-yellow {
   background-color: #cba029; /* yellow */

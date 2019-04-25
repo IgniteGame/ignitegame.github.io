@@ -22,20 +22,27 @@ layout: default-layout
   .fa-cog {
     font-size: 75%;
   }
+  a {
+    color: #fff;
+  }
+  hr {
+    background-color: #fff;
+  }
 </style>
 
-<img id="animated-icon" src="{{ site.baseurl }}/assets/images/icon-thick-animated.svg" onerror="this.onerror=null;this.width='0px';" width="180px">
+<div class="container-fluid bg-black">
+  <img id="animated-icon" src="{{ site.baseurl }}/assets/images/icon-thick-animated.svg" onerror="this.onerror=null;this.width='0px';" width="180px">
 
-<h1 id="error404">Error 4<i class="fas fa-cog fa-spin"></i>4 </h1><h3>Page not found</h3>
-<br>
-
-<button id="takeMeHome" type="button" onclick="window.open('index.html', '_self');" class="btn btn-default"><strong>Take me back </strong><span class="fa fa-home"></span></button>
-
-<br><br><hr>
-<p>Something wrong? Let us know:
+  <h1 id="error404">Error 4<i class="fas fa-cog fa-spin"></i>4 </h1><h3>Page not found</h3>
   <br>
-  <button id="contactButton" type="button" class="btn btn-default btn-lg">
-  <a tabindex="-1" href="mailto:contact@ignite.cards">contact@ignite.cards</a>
-  <i class="fas fa-envelope"></i>
-  </button>
-</p>
+
+  <button id="takeMeHome" type="button" onclick="window.open('index.html', '_self');" class="btn btn-default"><strong>Take me back </strong><span class="fa fa-home"></span></button>
+
+  <br><br>
+  <hr>
+  <p>Something wrong? Let us know:
+    <br>
+
+    <a tabindex="-1" href="mailto:contact@ignite.cards">contact@ignite.cards</a>
+  </p>
+</div>
