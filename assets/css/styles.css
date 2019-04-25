@@ -102,7 +102,7 @@ img {
   padding: 25px;
   font-size: 200%;  
 }
-a, a:hover {
+a, a:hover, a:focus, a:active a:visited {
   color: #991f1f;
 }
 h2 {
@@ -137,7 +137,11 @@ hr {
   margin-top: 100px;
 }
 .logo-game {
-  width: 200px;	
+  width: 200px;
+  transition: all 0.4s ease-in-out;
+}
+.logo-game:hover {
+  transform: scale(1.2);
 }
 
 .container-fluid.bg-grey {
