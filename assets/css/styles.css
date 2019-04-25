@@ -356,6 +356,9 @@ footer a, footer a:hover {
 .st-btn {
   background-color: #333 !important;
 }
+.st-btn:hover {
+  opacity: 1 !important;
+}
 .st-label, .st-shares {
   color: #fff !important;
 }
