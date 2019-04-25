@@ -347,7 +347,7 @@ footer a, footer a:hover {
 }*/
 
 #molten-man {
-  width: 300px;
+  width: 500px;
 }
 
 /* @MEDIA */
@@ -363,6 +363,9 @@ footer a, footer a:hover {
 }
 @media screen and (max-width: 768px) { /*small*/
   #gameboard {
+    width: 300px;
+  }
+  #molten-man {
     width: 300px;
   }
   .logo-game {
