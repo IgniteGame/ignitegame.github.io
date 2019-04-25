@@ -31,7 +31,7 @@ i {
 }*/
 #home-inner-div {
   /*https://davidwalsh.name/background-animation-css*/
-  background-image: url(../images/artwork/molten-maniac-edited.png);
+  background-image: url(../images/artwork/molten-maniac-cropped-transparent.png);
   background-position: 0% 40%;
   background-repeat: no-repeat;
   animation: animatedBackground 1.5s ease-in 1;
