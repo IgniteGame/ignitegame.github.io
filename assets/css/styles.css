@@ -20,14 +20,38 @@ body, .jumbotron, .navbar {
 }
 body {
   background: #991f1f url(../images/board/board-art-small.png) no-repeat fixed center;
+  /*z-index: -2;*/
 }
 i {
   padding: 0 !important;
 }
 
-#home {
-/*  background: #991f1f url(../images/board/board-art-small.png) no-repeat fixed center;;*/
+/*#home {
+  background: #991f1f url(../images/board/board-art-small.png) no-repeat fixed center;;
+}*/
+#home-inner-div {
+  /*https://davidwalsh.name/background-animation-css*/
+  background-image: url(../images/artwork/molten-maniac-edited.png);
+  background-position: 0% 40%;
+  background-repeat: no-repeat;
+  animation: animatedBackground 1.5s ease-in 1;
+  background-color: rgba(51,51,51,0.2);
 }
+#home-inner-div p {
+  text-shadow: 4px 4px 4px #333;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 2000px 40%;
+    opacity: 0;
+  }
+  to {
+    background-position: 0% 40%;
+    opacity: 1;
+  }
+}
+
 
 /*.page-scroll {
   margin: 0px !important;
@@ -350,9 +374,13 @@ footer a, footer a:hover {
   background-size: 479px 500px;
 }*/
 
-#molten-man {
+/*#molten-man {
   width: 500px;
-}
+  position: absolute;
+  left: 40%;
+  top: 120px;
+}*/
+
 
 /* @MEDIA */
 @media screen and (max-width: 1280px) {
@@ -366,12 +394,16 @@ footer a, footer a:hover {
 
 }
 @media screen and (max-width: 768px) { /*small*/
+  #home-inner-div {
+    background-image: none;
+    animation: none;
+  }
   #gameboard {
     width: 300px;
   }
-  #molten-man {
+/*  #molten-man {
     width: 300px;
-  }
+  }*/
   .logo-game {
     margin-top: 30px;
   }
