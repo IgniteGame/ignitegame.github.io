@@ -20,14 +20,38 @@ body, .jumbotron, .navbar {
 }
 body {
   background: #991f1f url(../images/board/board-art-small.png) no-repeat fixed center;
+  /*z-index: -2;*/
 }
 i {
   padding: 0 !important;
 }
 
-#home {
-/*  background: #991f1f url(../images/board/board-art-small.png) no-repeat fixed center;;*/
+/*#home {
+  background: #991f1f url(../images/board/board-art-small.png) no-repeat fixed center;;
+}*/
+#home-inner-div {
+  /*https://davidwalsh.name/background-animation-css*/
+  background-image: url(../images/artwork/molten-maniac-cropped-transparent.png);
+  background-position: 0% 40%;
+  background-repeat: no-repeat;
+  animation: animatedBackground 1.5s ease-in 1;
+  background-color: rgba(51,51,51,0.2);
 }
+#home-inner-div p {
+  text-shadow: 4px 4px 4px #333;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 2000px 40%;
+    opacity: 0;
+  }
+  to {
+    background-position: 0% 40%;
+    opacity: 1;
+  }
+}
+
 
 /*.page-scroll {
   margin: 0px !important;
@@ -75,22 +99,6 @@ img {
 }
 
 
-/* alert */
-.alert {
-  border-radius: 0;	
-  border: 0;	
-}
-.alert .close {
-  color: #333;	
-}
-.alert-success {
-  background-color: #9f9;
-  color: #1f991f;
-}
-.alert-danger {
-  background-color: #f99;
-  color: #991f1f;
-}
 #info-left {
   text-align: right;	
 }
@@ -102,7 +110,7 @@ img {
   padding: 25px;
   font-size: 200%;  
 }
-a, a:hover {
+a, a:hover, a:focus, a:active a:visited {
   color: #991f1f;
 }
 h2 {
@@ -137,7 +145,11 @@ hr {
   margin-top: 100px;
 }
 .logo-game {
-  width: 200px;	
+  width: 200px;
+  transition: all 0.4s ease-in-out;
+}
+.logo-game:hover {
+  transform: scale(1.2);
 }
 
 .container-fluid.bg-grey {
@@ -147,6 +159,10 @@ hr {
 .container-fluid.bg-white {
   /*background-color: #fff*/
   background-color: rgba(255,255,255,0.8);
+}
+.container-fluid.bg-black {
+  /*background-color: #fff*/
+  background-color: rgba(51,51,51,0.5);
 }
 
 .btn-yellow {
@@ -184,10 +200,12 @@ label {
   margin-bottom: 0px !important;
   padding-bottom: 25px !important;
   text-align: center;
-  /*background-color: #991f1f; /* red */
-  background-color: rgba(153, 31, 31, 0.6); /* red */
   color: #fff;
   padding: 75px 25px;
+}
+.jumbotron, .bg-red {
+  /*background-color: #991f1f; /* red */
+  background-color: rgba(153, 31, 31, 0.6); /* red */
 }
 
 /* NAVBAR */
@@ -326,6 +344,9 @@ footer a, footer a:hover {
 .st-btn {
   background-color: #333 !important;
 }
+.st-btn:hover {
+  opacity: 1 !important;
+}
 .st-label, .st-shares {
   color: #fff !important;
 }
@@ -344,9 +365,13 @@ footer a, footer a:hover {
   background-size: 479px 500px;
 }*/
 
-#molten-man {
-  width: 300px;
-}
+/*#molten-man {
+  width: 500px;
+  position: absolute;
+  left: 40%;
+  top: 120px;
+}*/
+
 
 /* @MEDIA */
 @media screen and (max-width: 1280px) {
@@ -360,9 +385,16 @@ footer a, footer a:hover {
 
 }
 @media screen and (max-width: 768px) { /*small*/
+  #home-inner-div {
+    background-image: none;
+    animation: none;
+  }
   #gameboard {
     width: 300px;
   }
+/*  #molten-man {
+    width: 300px;
+  }*/
   .logo-game {
     margin-top: 30px;
   }

@@ -9,7 +9,7 @@ permalink: /contents/
 <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
 
 <!-- a-frame game box -->
-<div id="a-frame-game-box">
+<div id="a-frame-game-box" class="bg-red">
   <a-scene embedded loading-screen="dotsColor: #991f1f; backgroundColor: #333"
   vr-mode-ui="enabled: false">
 
@@ -20,11 +20,20 @@ permalink: /contents/
       <img id="box-front" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/box/box-front.png">
       <img id="box-long-sides" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/box/box-long-sides.png">
       <img id="box-short-sides" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/box/box-short-sides.png">
+      <img id="dice-forge" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/dice/3d/forge.svg">
+      <img id="dice-1" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/dice/3d/slot 1.svg">
+      <img id="dice-2" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/dice/3d/slot 2.svg">
+      <img id="dice-3" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/dice/3d/slot 3.svg">
+      <img id="dice-4" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/dice/3d/slot 4.svg">
+      <img id="dice-small" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/dice/3d/small explosion.svg">
+      <img id="dice-medium" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/dice/3d/medium explosion.svg">
+      <img id="dice-large" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/dice/3d/large explosion.svg">
+      <img id="board" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/board/board.png">
     </a-assets>
 
     <!-- the box -->
     <!-- scale is 1 is 2in, so 7.5in is 3.75, 4.5 is 2.25, 1.5 is 0.75 -->
-    <a-entity rotation="0 0 0" 
+    <a-entity rotation="0 0 0" position="0 0 -3"
     animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 5000; easing: easeInOutBack">
       <!-- front side -->
       <a-image src="#box-front" position="0 0 0" rotation="0 0 0" width="3.75" height="2.25"></a-image>
@@ -42,10 +51,45 @@ permalink: /contents/
       <a-image src="#box-long-sides" position="0 -1.125 -0.375" rotation="-90 180 0" width="3.75" height="0.75"></a-image>
     </a-entity>
 
-    <a-sky color="#333"></a-sky>
+    <!-- the dice -->
+    <!-- dice are 16mm so about .63in, so .315 is half, .1575 is half -->
+    <!-- left die -->
+    <a-entity rotation="0 0 0" position="-2.5 -1 -2"
+    animation="property: rotation; from: 0 0 0; to: 360 360 0; loop: true; dur: 3000; easing: linear">
+	  <!-- front and back -->
+      <a-image src="#dice-forge" position="0 0 0" rotation="0 0 0" width="0.315" height="0.315"></a-image>
+      <a-image src="#dice-forge" position="0 0 -0.315" rotation="0 0 0" width="0.315" height="0.315"></a-image>
+      <!-- left and right -->
+      <a-image src="#dice-1" position="-0.1575 0 -0.1575" rotation="0 90 90" width="0.315" height="0.315"></a-image>
+      <a-image src="#dice-4" position="0.1575 0 -0.1575" rotation="0 90 90" width="0.315" height="0.315"></a-image>
+      <!-- top and bottom -->
+      <a-image src="#dice-2" position="0 0.1575 -0.1575" rotation="-90 180 0" width="0.315" height="0.315"></a-image>
+      <a-image src="#dice-3" position="0 -0.1575 -0.1575" rotation="-90 180 0" width="0.315" height="0.315"></a-image>
+    </a-entity>
+    <!-- right die -->
+    <a-entity rotation="0 0 0" position="2.5 0 -2"
+    animation="property: rotation; from: 0 0 0; to: 360 360 0; loop: true; dur: 3000; easing: linear">
+	  <!-- front and back -->
+      <a-image src="#dice-large" position="0 0 0" rotation="0 0 0" width="0.315" height="0.315"></a-image>
+      <a-image src="#dice-large" position="0 0 -0.315" rotation="0 0 0" width="0.315" height="0.315"></a-image>
+      <!-- left and right -->
+      <a-image src="#dice-medium" position="-0.1575 0 -0.1575" rotation="0 90 90" width="0.315" height="0.315"></a-image>
+      <a-image src="#dice-large" position="0.1575 0 -0.1575" rotation="0 90 90" width="0.315" height="0.315"></a-image>
+      <!-- top and bottom -->
+      <a-image src="#dice-small" position="0 0.1575 -0.1575" rotation="-90 180 0" width="0.315" height="0.315"></a-image>
+      <a-image src="#dice-small" position="0 -0.1575 -0.1575" rotation="-90 180 0" width="0.315" height="0.315"></a-image>
+    </a-entity>
+
+    <!-- board -->
+    <!-- 10.5 by 7, so 5.25 by 3.5 -->
+    <a-entity rotation="0 0 0" position="0 -2 -4.25">
+      <a-image src="#board" position="0 0 0" rotation="-90 0 0" width="5.25" height="3.5"></a-image>
+    </a-entity>
+
+    <!-- <a-sky color="#333"></a-sky> -->
 
     <!-- <a-entity rotation="0 -15 0"> -->
-      <a-camera position="0 0 3"></a-camera>
+      <a-camera look-controls-enabled="false" wasd-controls-enabled="false" position="0 0 3"></a-camera>
     <!-- </a-entity> -->
 
   </a-scene>
