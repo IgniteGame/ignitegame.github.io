@@ -7,6 +7,9 @@ add contents list/in the box images of what the game comes with
 embed trailer from youtube?
 add link to kickstarter
 add articles and carousel of reviews
+add page for lore
+add page for strategy
+add page for printable brackets
 
 then add what's in the box, link to read the rules
 show image of board on front page
