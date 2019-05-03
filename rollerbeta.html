@@ -1,0 +1,28 @@
+---
+layout: default-layout
+title: Roller Beta
+active: Roll Beta
+permalink: /rollerbeta/
+---
+
+
+<link rel="shortcut icon" href="{{ site.baseurl }}/assets/unity/TemplateData/favicon.ico">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/unity/TemplateData/style.css">
+<script src="{{ site.baseurl }}/assets/unity/TemplateData/UnityProgress.js"></script>
+<script src="{{ site.baseurl }}/assets/unity/Build/UnityLoader.js"></script>
+<script>
+  var gameInstance = UnityLoader.instantiate("gameContainer", "{{ site.baseurl }}/assets/unity/Build/Web.json", {onProgress: UnityProgress});
+</script>
+
+<div class="container-fluid bg-white text-center">
+
+  <div class="webgl-content">
+    <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">Ignite Dice</div>
+      </div>
+  </div>
+
+</div>
