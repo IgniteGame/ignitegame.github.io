@@ -66,6 +66,20 @@
 .active, .dot:hover {
   background-color: #666;
 }
+
+#cardsButton {
+  background: transparent;
+  box-shadow: none;
+  width: 64px;
+}
+.modal {
+  margin-top: 50px;
+}
+.modal-card {
+  width: 150px;
+  margin-bottom: 4px;
+}
+
 @media screen and (max-width: 768px) { /*small*/
   .dot {
     height: 12px;
