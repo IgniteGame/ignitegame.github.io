@@ -11,3 +11,17 @@
   color: #991f1f;
   font-weight: 600;
 }
+
+/* energy */
+#energyButton {
+	box-shadow: none !important;
+}
+.modal {
+	margin-top: 50px;
+}
+.energyCounter {
+	cursor: pointer;
+	width: 24px;
+	text-align: center !important;
+	margin: 5px;
+}
