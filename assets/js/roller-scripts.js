@@ -4,7 +4,7 @@ $(document).ready(function() {
 });
 document.onkeyup = function(e) {
   let code = e.keyCode ? e.keyCode : e.which;
-  if(code == 13) roll(); //enter
+  if(code == 13 && ! $('#rollButton').is(':focus') ) roll(); //enter
 }
 
 //names for images and for description
