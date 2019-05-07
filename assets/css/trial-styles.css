@@ -1,15 +1,8 @@
-
 /*positioning and size*/
 .gamecard {
   width: 2.5in;
   box-shadow: none;
 }
-/*.lineup.slot, #scrap {
-	width: 2.5in;
-	height: 3.5in;
-	border-radius: 20px;
-}*/
-
 .energy {
 	width: 0.75in;
 }
@@ -58,10 +51,8 @@
 #energy3, #energy4 {
 	margin-top: 5.5in;
 }
-
 #hand {
 	margin-top: 7.5in;
-	/*position: relative;*/
 	border: 5px solid #333;
 	padding: 10px;
 	text-align: left;
@@ -78,9 +69,6 @@
 	position: relative;
 }
 
-#toggleHandBtn {
-	position: relative;
-}
 
 /*aesthetic*/
 .lineup.slot .gamecard:hover, #scrap .gamecard:hover, .energySlot:hover {
@@ -106,5 +94,56 @@
 }
 
 @media screen and (max-width: 768px) { /*small*/
-	/*todo*/
+	/*half all vals*/
+	.gamecard {
+	  width: 1.25in;
+	}
+	.energy {
+		width: 0.375in;
+	}
+	#board {
+		left: 0.25in;
+	    width: 5.25in;
+	    height: 3.5in;
+	}
+	.slot {
+		margin-top: 0.125in;
+	}
+	#slot1 {
+		left: 0.375in;
+	}
+	#slot2 {
+		left: 1.625in;
+	}
+	#slot3 {
+		left: 2.875in;
+	}
+	#slot4 {
+		left: 4.125in;
+	}
+	#forge {
+		left: 2.125in;
+		margin-top: 1.75in;
+	}
+	#scrap {
+		left: 3.875in;
+		margin-top: 1.75in;
+	}
+	.energySlot {
+		margin-top: 2.25in;
+		left: 0.5in;
+	}
+	#energy2, #energy4 {
+		left: 1.125in;
+	}
+	#energy3, #energy4 {
+		margin-top: 2.75in;
+	}
+	#hand {
+		margin-top: 3.75in;
+	}
+	.damageCounter {
+		width: 0.25in;
+		margin-left: -0.25in;
+	}
 }
