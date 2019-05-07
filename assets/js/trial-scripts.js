@@ -25,6 +25,7 @@ $(function() {
         // empty img doesnt have onclick, lineup has onclick not lineup gamecard
         $('.gamecard.active').parent().append('<img src="/assets/images/cards/none.png" class="gamecard">');
       }
+      addCardToScrapModal(getCardNum($('.gamecard.active') ) ); // add to scrap modal
       setDmg($('.gamecard.active'), 0); // remove damage
       $(this).html($('.gamecard.active') ); // complete the move
       $('.gamecard').removeClass('active'); // remove active class
@@ -82,6 +83,31 @@ function addCardToHand(card) {
 // remove DOM elm from hand
 function removeCardFromHand(elm) {
   elm.remove();
+}
+
+// scrap functions for modal only
+function addCardToScrapModal(card) {
+  $('#scrapModalCards').append('<img src="/assets/images/cards/' + card + '.png" class="gamecard">');
+  $('#scrapModalCards .gamecard:last').click(function() {
+    //clicking on card in scrap modal returns to forge faceup
+    //todo: 
+    /*todo
+    get card num
+    add card num to deck[]
+    add img to top of deck, replace when drawn in draw function
+    remove from scrapmodal
+    display last card in scrapheapmodal in scrap*/
+  });
+}
+// scrap functions for modal only
+function removeCardFromScrapModal(elm) {
+  elm.remove();
+}
+
+// returns card number of DOM elm, useful for scrap
+function getCardNum(elm) {
+  let src = elm.prop('src');
+  return src.split('cards/')[1].replace('.png','');
 }
 
 // draw card from deck
