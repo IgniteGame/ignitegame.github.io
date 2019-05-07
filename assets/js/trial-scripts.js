@@ -20,7 +20,6 @@ $(function() {
 
   // clicking on scrap with a card in lineup moves it
   $('#scrap').click(function() {
-    console.log('aaa');
     if($('.gamecard.active').length!=0 && $('.gamecard.active').parent().hasClass('lineup') ) { // if something to move and it's inside lineup
       if($('.gamecard.active').parent().hasClass('lineup') ) { // if moving from slot, add empty img to slot
         // empty img doesnt have onclick, lineup has onclick not lineup gamecard
@@ -76,5 +75,8 @@ function removeCardFromHand(elm) {
 
 // draw card from deck
 function draw() {
-  addCardToHand(deck.pop() );
+  if(deck.length>0)
+    addCardToHand(deck.pop() );
+  if(deck.length==0)
+    updateCard('forge', 'none');
 }
