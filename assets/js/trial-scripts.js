@@ -11,7 +11,14 @@ $(function() {
   $('#toggleHandBtn').click(toggleHand);
 
   // clicking on lineup with card in hand selected moves it
-  $('.lineup.slot .gamecard').click(lineupCardClick);
+  $('.lineup.slot').click(function() {
+    if($('.gamecard.active').length!=0) { // if something to move
+      if($('.gamecard.active').parent().hasClass('lineup') ) { // if moving from slot, add empty img to slot
+        $('.gamecard.active').parent().append('<img src="/assets/images/cards/none.png" class="gamecard">');
+      }
+      $(this).html($('.gamecard.active') );
+    }
+  });
 
   // clicking on card toggles its active class, removes other actives if it's active
   $('#hand .gamecard').click(function() {
@@ -21,24 +28,8 @@ $(function() {
   });
 
 
-
-
 });
 
-function lineupCardClick() {
- if($('.gamecard.active').length!=0) { // if something to move
-    if($('.gamecard.active').parent().hasClass('lineup') ) { // if moving from slot, add empty img to slot
-      $('.gamecard.active').parent().append('<img src="/assets/images/cards/none.png" class="gamecard">').click(function() {
-        // this function is different because there's no if statement check to create another placeholder
-        // if($('.gamecard.active').length!=0) { // if something to move
-        //   $(this).parent().html($('.gamecard.active') );
-        // }
-        lineupCardClick($(this) );
-      });
-    }
-    $(this).parent().html($('.gamecard.active') );
-  } 
-}
 
 // slot is slot1, slot2, slot3, slot4, forge, scrap
 // card is 1-15, or 0 for back, or none for none
