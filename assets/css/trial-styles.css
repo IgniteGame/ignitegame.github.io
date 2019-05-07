@@ -4,6 +4,9 @@
   width: 2.5in;
   box-shadow: none;
 }
+.gamecard.active {
+	border: 5px solid #991f1f;
+}
 .energy {
 	width: 0.75in;
 }
@@ -51,4 +54,24 @@
 }
 #energy3, #energy4 {
 	margin-top: 5.5in;
+}
+
+#hand {
+	margin-top: 7.5in;
+	/*position: relative;*/
+	border: 5px solid #333;
+	padding: 10px;
+	text-align: left;
+	width: 100% !important;
+}
+#hand .gamecard {
+	padding-right: 5px;
+}
+
+#toggleHandBtn {
+	position: relative;
+}
+
+@media screen and (max-width: 768px) { /*small*/
+	/*todo*/
 }
