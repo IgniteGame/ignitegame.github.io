@@ -71,8 +71,7 @@
 }
 
 /*aesthetic*/
-
-.lineup.slot .gamecard:hover, .energySlot:hover {
+.lineup.slot .gamecard:hover, #scrap .gamecard:hover, .energySlot:hover {
 	border: 5px solid #999;
 }
 .gamecard.active, .gamecard.active:hover {

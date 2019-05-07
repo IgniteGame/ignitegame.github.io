@@ -11,9 +11,9 @@ $(function() {
   $('#toggleHandBtn').click(toggleHand);
 
   // clicking on lineup with card in hand selected moves it
-  $('.lineup.slot').click(function() {
+  $('.lineup.slot, #scrap').click(function() {
     if($('.gamecard.active').length!=0) { // if something to move
-      if($('.gamecard.active').parent().hasClass('lineup') ) { // if moving from slot, add empty img to slot
+      if($('.gamecard.active').parent().hasClass('lineup') || $('.gamecard.active').parent().is('#scrap') ) { // if moving from slot, add empty img to slot
         $('.gamecard.active').parent().append('<img src="/assets/images/cards/none.png" class="gamecard">');
       }
       console.log($(this).html() );
