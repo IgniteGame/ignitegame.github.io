@@ -24,7 +24,7 @@ function toggleEnergy(elm) {
 	if(elm.prop('src').includes('-empty') ) {
 		elm.prop('src', elm.prop('src').replace('icon-energy-empty', 'icon-energy') );
 	} else {
-		elm.prop('src', elm.prop('src').replace('icon-energy', 'icon-energy-empty') );			
+		elm.prop('src', elm.prop('src').replace('icon-energy', 'icon-energy-empty') );
 	}
 }
 

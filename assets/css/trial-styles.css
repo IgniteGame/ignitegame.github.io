@@ -1,0 +1,54 @@
+
+
+.gamecard {
+  width: 2.5in;
+  box-shadow: none;
+}
+.energy {
+	width: 0.75in;
+}
+
+#board {
+	position: absolute;
+	left: 0.5in;
+    width: 10.5in;
+    height: 7in;
+
+}
+.slot {
+	position: absolute;
+	margin-top: 0.25in;
+}
+#slot1 {
+	left: 0.75in;
+}
+#slot2 {
+	left: 3.25in;
+}
+#slot3 {
+	left: 5.75in;
+}
+#slot4 {
+	left: 8.25in;
+}
+#forge {
+	transform: rotate(90deg);
+	left: 4.25in;
+	margin-top: 3.5in;
+}
+#scrap {
+	transform: rotate(90deg);
+	left: 7.75in;
+	margin-top: 3.5in;
+}
+.energySlot {
+	position: absolute;
+	margin-top: 4.5in;
+	left: 1in;
+}
+#energy2, #energy4 {
+	left: 2.25in;
+}
+#energy3, #energy4 {
+	margin-top: 5.5in;
+}
