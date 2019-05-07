@@ -28,6 +28,13 @@ $(function() {
     $(this).toggleClass('active');
   });
 
+  // start with 5 cards
+  for(let i=0; i<5; i++) {
+    draw();
+  }
+
+  // click forge to draw
+  $('#forge').click(draw);
 
 });
 
@@ -53,4 +60,9 @@ function addCardToHand(card) {
 // remove DOM elm from hand
 function removeCardFromHand(elm) {
   elm.remove();
+}
+
+// draw card from deck
+function draw() {
+  addCardToHand(deck.pop() );
 }
