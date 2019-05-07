@@ -31,6 +31,10 @@ $(function() {
     }
   });
 
+  $('#dmgSelect').change(function() {
+    setDmg(currentDmgCard, $(this).val() ); // add dmg equal to select val
+  }); 
+
   // start with 5 cards
   for(let i=0; i<5; i++) {
     draw();
@@ -107,13 +111,12 @@ function setDmgModal(num) {
   $('#dmgSelect').val(num);
 }
 
+let currentDmgCard;
+
 // open damage on selected card modal
 function openDmgModal(elm) {
   setDmgModal(getDmg(elm) );
   $('#dmgModal').modal('show');
   $('#dmgSelect').focus();
-  $('#dmgSelect').change(function() {
-    // changing select now affects this card
-    setDmg(elm, $(this).val() ); // add dmg equal to select val
-  }); 
+  currentDmgCard = elm; // set elm to be affected by damage select in modal
 }
