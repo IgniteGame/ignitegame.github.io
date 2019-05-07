@@ -71,11 +71,12 @@
 }
 
 /*aesthetic*/
-.gamecard.active {
-	border: 5px solid #991f1f;
-}
+
 .lineup.slot .gamecard:hover, .energySlot:hover {
 	border: 5px solid #999;
+}
+.gamecard.active, .gamecard.active:hover {
+	border: 5px solid #991f1f !important;
 }
 .energySlot:hover {
 	border-radius: 50%;

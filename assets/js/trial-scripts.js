@@ -16,6 +16,7 @@ $(function() {
       if($('.gamecard.active').parent().hasClass('lineup') ) { // if moving from slot, add empty img to slot
         $('.gamecard.active').parent().append('<img src="/assets/images/cards/none.png" class="gamecard">');
       }
+      console.log($(this).html() );
       $(this).html($('.gamecard.active') );
     }
   });
