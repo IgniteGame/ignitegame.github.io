@@ -10,16 +10,19 @@ $(function() {
   // toggle hand on btn click
   $('#toggleHandBtn').click(toggleHand);
 
+  // clicking on lineup with card in hand selected moves it
   $('.lineup.slot .gamecard').click(function() {
-    
-    $(this).parent().html($('.active') );
-    // let slotNum = $(this).parent().attr('id')[4];
-    // console.log(slotNum);
-    
+    if($('.gamecard.active').length!=0) { // if something to move
+      if($('.gamecard.active').parent().hasClass('lineup') ) { // if moving from slot, add empty img to slot
+        console.log('adding placeholder');
+        $('.gamecard.active').parent().append('<img src="/assets/images/cards/none.png" class="gamecard">');
+      }
+      $(this).parent().html($('.gamecard.active') );
+    }
   });
 
   // clicking on card toggles its active class, removes other actives if it's active
-  $('.gamecard').click(function() {
+  $('#hand .gamecard').click(function() {
     if(! $(this).hasClass('active') )
       $('.gamecard').removeClass('active');
     $(this).toggleClass('active');
