@@ -11,14 +11,22 @@ $(function() {
   $('#toggleHandBtn').click(toggleHand);
 
   // clicking on lineup with card in hand selected moves it
-  $('.lineup.slot, #scrap').click(function() {
+  // $('.lineup.slot .gamecard').click(function() {
+  $('.lineup.slot').click(function() {
     if($('.gamecard.active').length!=0 && $('.gamecard.active').parent().is('#hand') ) { // if something to move and it's inside the hand
-    // if($('.gamecard.active').length!=0) { // if something to move
-      if($('.gamecard.active').parent().hasClass('lineup') || $('.gamecard.active').parent().is('#scrap') ) { // if moving from slot, add empty img to slot
+      $(this).html($('.gamecard.active') ); // complete the move
+      $('.gamecard').removeClass('active'); // remove active class
+    }
+  });
+
+  // clicking on scrap with a card in lineup moves it
+  $('#scrap').click(function() {
+    if($('.gamecard.active').length!=0 && $('.gamecard.active').parent().hasClass('lineup') ) { // if something to move and it's inside lineup
+      if($('.gamecard.active').parent().hasClass('lineup') ) { // if moving from slot, add empty img to slot
         $('.gamecard.active').parent().append('<img src="/assets/images/cards/none.png" class="gamecard">');
       }
-      console.log($(this).html() );
-      $(this).html($('.gamecard.active') );
+      $(this).html($('.gamecard.active') ); // complete the move
+      $('.gamecard').removeClass('active'); // remove active class
     }
   });
 
