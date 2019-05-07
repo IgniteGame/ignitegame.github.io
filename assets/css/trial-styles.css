@@ -4,6 +4,12 @@
   width: 2.5in;
   box-shadow: none;
 }
+.lineup.slot, #scrap {
+	/*clickboxes*/
+	width: 2.5in;
+	height: 3.5in;
+	border-radius: 20px;
+}
 
 .energy {
 	width: 0.75in;
@@ -71,7 +77,7 @@
 }
 
 /*aesthetic*/
-.lineup.slot .gamecard:hover, #scrap .gamecard:hover, .energySlot:hover {
+.lineup.slot:hover, #scrap:hover, .energySlot:hover {
 	border: 5px solid #999;
 }
 .gamecard.active, .gamecard.active:hover {

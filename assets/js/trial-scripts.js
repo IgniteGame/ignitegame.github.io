@@ -12,20 +12,14 @@ $(function() {
 
   // clicking on lineup with card in hand selected moves it
   $('.lineup.slot, #scrap').click(function() {
+    //if($('.gamecard.active').length!=0 && $('.gamecard.active').parent().is('#hand') ) { // if something to move and it's inside the hand
     if($('.gamecard.active').length!=0) { // if something to move
-      if($('.gamecard.active').parent().hasClass('lineup') || $('.gamecard.active').parent().is('#scrap') ) { // if moving from slot, add empty img to slot
-        $('.gamecard.active').parent().append('<img src="/assets/images/cards/none.png" class="gamecard">');
-      }
+      // if($('.gamecard.active').parent().hasClass('lineup') || $('.gamecard.active').parent().is('#scrap') ) { // if moving from slot, add empty img to slot
+      //   $('.gamecard.active').parent().append('<img src="/assets/images/cards/none.png" class="gamecard">');
+      // }
       console.log($(this).html() );
       $(this).html($('.gamecard.active') );
     }
-  });
-
-  // clicking on card toggles its active class, removes other actives if it's active
-  $('#hand .gamecard').click(function() {
-    if(! $(this).hasClass('active') )
-      $('.gamecard').removeClass('active');
-    $(this).toggleClass('active');
   });
 
   // start with 5 cards
@@ -37,7 +31,6 @@ $(function() {
   $('#forge').click(draw);
 
 });
-
 
 // slot is slot1, slot2, slot3, slot4, forge, scrap
 // card is 1-15, or 0 for back, or none for none
@@ -56,6 +49,12 @@ function toggleHand() {
 // add card number to hand
 function addCardToHand(card) {
   $('#hand').append('<img src="/assets/images/cards/' + card + '.png" class="gamecard">');
+  $('#hand .gamecard:last').click(function() {
+    // clicking on card toggles its active class, removes other actives if it's active
+    if(! $(this).hasClass('active') )
+      $('.gamecard').removeClass('active');
+    $(this).toggleClass('active');
+  });
 }
 // remove DOM elm from hand
 function removeCardFromHand(elm) {
