@@ -25,6 +25,7 @@ $(function() {
         // empty img doesnt have onclick, lineup has onclick not lineup gamecard
         $('.gamecard.active').parent().append('<img src="/assets/images/cards/none.png" class="gamecard">');
       }
+      setDmg($('.gamecard.active'), 0); // remove damage
       $(this).html($('.gamecard.active') ); // complete the move
       $('.gamecard').removeClass('active'); // remove active class
     }
@@ -67,6 +68,12 @@ function addCardToHand(card) {
       $('.gamecard').removeClass('active');
     $(this).toggleClass('active');
   });
+  $('#hand .gamecard:last').dblclick(function() {
+    //doubleclicking on card in lineup opens damage modal
+    if($(this).parent().hasClass('lineup') ) {
+      openDmgModal($(this) );
+    }
+  });
 }
 // remove DOM elm from hand
 function removeCardFromHand(elm) {
@@ -79,4 +86,34 @@ function draw() {
     addCardToHand(deck.pop() );
   if(deck.length==0)
     updateCard('forge', 'none');
+}
+
+// set damage counters on DOM elm
+function setDmg(elm, num) {
+  elm.parent().find('.damageCounter').remove();
+  if(num!=0)
+    elm.parent().append('<img src="/assets/images/tokens/damage-' + num + '.png" class="damageCounter">');
+}
+function getDmg(elm) {
+  if(elm.siblings('.damageCounter').length) {
+    let src = elm.siblings('.damageCounter').prop('src');
+    return src.charAt(src.length-5); // 4 last chars are '.png'    
+  }
+  return 0;
+}
+
+// set value in dropdown in modal
+function setDmgModal(num) {
+  $('#dmgSelect').val(num);
+}
+
+// open damage on selected card modal
+function openDmgModal(elm) {
+  setDmgModal(getDmg(elm) );
+  $('#dmgModal').modal('show');
+  $('#dmgSelect').focus();
+  $('#dmgSelect').change(function() {
+    // changing select now affects this card
+    setDmg(elm, $(this).val() ); // add dmg equal to select val
+  }); 
 }
