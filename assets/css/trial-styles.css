@@ -1,0 +1,149 @@
+/*positioning and size*/
+.gamecard {
+  width: 2.5in;
+  box-shadow: none;
+}
+.energy {
+	width: 0.75in;
+}
+
+#board {
+	position: absolute;
+	left: 0.5in;
+    width: 10.5in;
+    height: 7in;
+
+}
+.slot {
+	position: absolute;
+	margin-top: 0.25in;
+}
+#slot1 {
+	left: 0.75in;
+}
+#slot2 {
+	left: 3.25in;
+}
+#slot3 {
+	left: 5.75in;
+}
+#slot4 {
+	left: 8.25in;
+}
+#forge {
+	transform: rotate(90deg);
+	left: 4.25in;
+	margin-top: 3.5in;
+}
+#scrap {
+	transform: rotate(90deg);
+	left: 7.75in;
+	margin-top: 3.5in;
+}
+.energySlot {
+	position: absolute;
+	margin-top: 4.5in;
+	left: 1in;
+}
+#energy2, #energy4 {
+	left: 2.25in;
+}
+#energy3, #energy4 {
+	margin-top: 5.5in;
+}
+#hand {
+	margin-top: 7.5in;
+	border: 5px solid #333;
+	padding: 10px;
+	text-align: left;
+	width: 100% !important;
+}
+#hand .gamecard {
+	padding-right: 5px;
+}
+
+.damageCounter {
+	width: 0.5in;
+	text-align: left !important;
+	margin-left: -0.5in;
+	position: relative;
+}
+
+
+/*aesthetic*/
+.lineup.slot .gamecard:hover, #scrap .gamecard:hover, .energySlot:hover {
+	border: 5px solid #999;
+}
+.gamecard.active, .gamecard.active:hover {
+	border: 5px solid #991f1f !important;
+}
+.energySlot:hover {
+	border-radius: 50%;
+}
+#forge:hover {
+	border: 5px solid #cba12c;
+	border-radius: 18px; /*don't know why this is necessary only on forge*/
+}
+
+/*modal*/
+.modal {
+	margin-top: 50px;
+}
+.modal p {
+	font-size: 100%;
+}
+
+@media screen and (max-width: 768px) { /*small*/
+	/*half all vals*/
+	.gamecard {
+	  width: 1.25in;
+	}
+	.energy {
+		width: 0.375in;
+	}
+	#board {
+		left: 0.25in;
+	    width: 5.25in;
+	    height: 3.5in;
+	}
+	.slot {
+		margin-top: 0.125in;
+	}
+	#slot1 {
+		left: 0.375in;
+	}
+	#slot2 {
+		left: 1.625in;
+	}
+	#slot3 {
+		left: 2.875in;
+	}
+	#slot4 {
+		left: 4.125in;
+	}
+	#forge {
+		left: 2.125in;
+		margin-top: 1.75in;
+	}
+	#scrap {
+		left: 3.875in;
+		margin-top: 1.75in;
+	}
+	.energySlot {
+		margin-top: 2.25in;
+		left: 0.5in;
+	}
+	#energy2, #energy4 {
+		left: 1.125in;
+	}
+	#energy3, #energy4 {
+		margin-top: 2.75in;
+	}
+	#hand {
+		margin-top: 3.75in;
+	}
+	.damageCounter {
+		width: 0.25in;
+		margin-left: -0.25in;
+	}
+}

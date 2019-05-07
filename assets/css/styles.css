@@ -92,10 +92,12 @@ img {
   padding: 75px 75px;
 }
 
-.form-control:focus, input:focus, button:focus, a:focus {
+.form-control:focus, input:focus, button:focus, a:focus, select:focus {
   border-color: #cba029 !important; /* yellow */
   border-width: 2px !important;
   outline: 0 !important;
+  box-shadow: 0px !important;
+  -webkit-box-shadow: 0px !important;
 }
 
 
