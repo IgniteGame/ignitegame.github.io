@@ -11,7 +11,6 @@ $(function() {
   $('#toggleHandBtn').click(toggleHand);
 
   // clicking on lineup with card in hand selected moves it
-  // $('.lineup.slot .gamecard').click(function() {
   $('.lineup.slot').click(function() {
     if($('.gamecard.active').length!=0 && $('.gamecard.active').parent().is('#hand') ) { // if something to move and it's inside the hand
       $(this).html($('.gamecard.active') ); // complete the move
@@ -20,12 +19,14 @@ $(function() {
   });
 
   // clicking on scrap with a card in lineup moves it
-  $('#scrap').click(function() {
+  $('#scrap .gamecard').click(function() {
+    console.log('aaa');
     if($('.gamecard.active').length!=0 && $('.gamecard.active').parent().hasClass('lineup') ) { // if something to move and it's inside lineup
       if($('.gamecard.active').parent().hasClass('lineup') ) { // if moving from slot, add empty img to slot
+        // empty img doesnt have onclick, lineup has onclick not lineup gamecard
         $('.gamecard.active').parent().append('<img src="/assets/images/cards/none.png" class="gamecard">');
       }
-      $(this).html($('.gamecard.active') ); // complete the move
+      $(this).parent().html($('.gamecard.active') ); // complete the move
       $('.gamecard').removeClass('active'); // remove active class
     }
   });
@@ -58,6 +59,8 @@ function toggleHand() {
 function addCardToHand(card) {
   $('#hand').append('<img src="/assets/images/cards/' + card + '.png" class="gamecard">');
   $('#hand .gamecard:last').click(function() {
+    if($(this).parent().is('#scrap') ) // don't run if in scrap, can't select scrap cards, this way we can move multiple cards on scrap
+      return;
     // clicking on card toggles its active class, removes other actives if it's active
     if(! $(this).hasClass('active') )
       $('.gamecard').removeClass('active');
