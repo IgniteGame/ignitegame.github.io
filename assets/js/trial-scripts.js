@@ -14,9 +14,9 @@ $(function() {
   $('.lineup.slot, #scrap').click(function() {
     //if($('.gamecard.active').length!=0 && $('.gamecard.active').parent().is('#hand') ) { // if something to move and it's inside the hand
     if($('.gamecard.active').length!=0) { // if something to move
-      // if($('.gamecard.active').parent().hasClass('lineup') || $('.gamecard.active').parent().is('#scrap') ) { // if moving from slot, add empty img to slot
-      //   $('.gamecard.active').parent().append('<img src="/assets/images/cards/none.png" class="gamecard">');
-      // }
+      if($('.gamecard.active').parent().hasClass('lineup') || $('.gamecard.active').parent().is('#scrap') ) { // if moving from slot, add empty img to slot
+        $('.gamecard.active').parent().append('<img src="/assets/images/cards/none.png" class="gamecard">');
+      }
       console.log($(this).html() );
       $(this).html($('.gamecard.active') );
     }
