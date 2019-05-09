@@ -10,9 +10,12 @@ add articles and carousel of reviews
 add page for lore
 add page for strategy
 add page for printable brackets
+add print and play
+add digital downloads
+add media downloads
+add licence/copyright
 
 then add what's in the box, link to read the rules
-show image of board on front page
 about us where it explains who we are and how we've been designing ignite
 what we're doing differently section with link to read at top of front page
 
