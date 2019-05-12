@@ -97,6 +97,16 @@
 	font-size: 100%;
 }
 
+/*ignite dice*/
+.img-die {
+  width: 128px;
+  height: 128px;
+}
+
+#infoModal .modal-body {
+	font-size: 120%;
+}
+
 @media screen and (max-width: 768px) { /*small*/
 	/*half all vals*/
 	.gamecard {

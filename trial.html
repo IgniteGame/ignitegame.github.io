@@ -50,6 +50,7 @@ permalink: /trial/
   <button id="toggleHandBtn" class="btn">Toggle Hand</button>
   <button class="btn" data-toggle="modal" data-target="#infoModal">How to Use</button>
   <button class="btn" data-toggle="modal" data-target="#scrapModal">Return from Scrapheap</button>
+  <button id="igniteBtn" class="btn" data-toggle="modal" data-target="#igniteModal">Ignite!</button>
 
 </div>
 
@@ -73,7 +74,7 @@ permalink: /trial/
 </div>
 
 <div class="modal fade" id="infoModal">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -86,8 +87,10 @@ permalink: /trial/
         <p>Click the forge to draw a card</p>
         <p>Click an energy counter to toggle it</p>
         <p>Doubleclick a card in lineup to edit its damage</p>
-        <p>Click the toggle hand to toggle display of your hand</p>
-        <p>Open a new tab with the ignite roller and sharescreens to play your friend(s) remotely!</p>
+        <p>Click the toggle hand button to toggle display of your hand</p>
+        <p>Click the return from scrapheap button to return a card to the top of your forge, faceup</p>
+        <p>Click the Ignite button to roll an Ignite</p>
+        <p>Share screens to play your friend(s) remotely!</p>
         <p>Remember to turn display fo your hand off when sharing, and pause sharing to summon minions</p>
       </div>
     </div>
@@ -103,6 +106,22 @@ permalink: /trial/
       </div>
       <div class="modal-body text-center">
         <div id="scrapModalCards"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="igniteModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Ignite</h4>
+      </div>
+      <div class="modal-body text-center">
+          <img id="targetDie" class="img-die" src="">
+          <img id="damageDie" class="img-die" src="">
+          <p id="desc"></p>
       </div>
     </div>
   </div>

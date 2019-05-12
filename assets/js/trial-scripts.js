@@ -7,8 +7,7 @@ $(function() {
       $(this).prop('src', $(this).prop('src').replace('icon-energy', 'icon-energy-empty') );
   });
 
-  // toggle hand on btn click
-  $('#toggleHandBtn').click(toggleHand);
+  $('#toggleHandBtn').click(toggleHand); // toggle hand with btn
 
   // clicking on lineup with card in hand selected moves it
   $('.lineup.slot').click(function() {
@@ -46,6 +45,9 @@ $(function() {
 
   // click forge to draw
   $('#forge').click(draw);
+
+  // ignite button ignites and opens modal display
+  $('#igniteBtn').click(roll);
 
 });
 
@@ -162,4 +164,22 @@ function openDmgModal(elm) {
   $('#dmgModal').modal('show');
   $('#dmgSelect').focus();
   currentDmgCard = elm; // set elm to be affected by damage select in modal
+}
+
+// ignite roll
+// copied and modified from roller.hmtl
+const targetImgs = ['slot 1', 'slot 2', 'slot 3', 'slot 4', 'forge', 'forge'];
+const damageImgs = ['small explosion', 'medium explosion', 'large explosion'];
+let rolls = [];
+
+function roll() {
+  rolls = [getRandom(6), getRandom(3)];
+  $('#targetDie').attr('src', '/assets/images/dice/' + targetImgs[rolls[0] ] + '.svg');
+  $('#damageDie').attr('src', '/assets/images/dice/' + damageImgs[rolls[1] ] + '.svg');
+  $('#desc').html('Hit ' + targetImgs[rolls[0] ] + ' with a ' + damageImgs[rolls[1] ] );
+  $('#numRolls').html(parseInt($('#numRolls').html() )+1);
+}
+
+function getRandom(sides) {
+  return Math.floor(Math.random() * sides);
 }
