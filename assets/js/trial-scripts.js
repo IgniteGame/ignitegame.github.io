@@ -95,7 +95,7 @@ function removeCardFromHand(elm) {
 // given card number, add card to scrap and scrap modal
 function addCardToScrap(card) {
   // add to modal and scrap array
-  console.log(card);
+  //console.log(card);
   $('#scrapModalCards').append('<img src="/assets/images/cards/' + card + '.png" class="gamecard">');
   scrap.push(card);
 
