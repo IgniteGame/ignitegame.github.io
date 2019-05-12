@@ -25,10 +25,13 @@ $(function() {
         // empty img doesnt have onclick, lineup has onclick not lineup gamecard
         $('.gamecard.active').parent().append('<img src="/assets/images/cards/none.png" class="gamecard">');
       }
-      addCardToScrapModal(getCardNum($('.gamecard.active') ) ); // add to scrap modal
+      addCardToScrap(getCardNum($('.gamecard.active') ) ); // add to scrap modal
       setDmg($('.gamecard.active'), 0); // remove damage
       $(this).html($('.gamecard.active') ); // complete the move
       $('.gamecard').removeClass('active'); // remove active class
+    }
+    else { // if no active card to move to scrap, open return from scrap modal
+      $('#scrapModal').modal('show');
     }
   });
 
@@ -85,37 +88,51 @@ function removeCardFromHand(elm) {
   elm.remove();
 }
 
-// scrap functions for modal only
-function addCardToScrapModal(card) {
+// given card number, add card to scrap and scrap modal
+function addCardToScrap(card) {
+  // add to modal and scrap array
   $('#scrapModalCards').append('<img src="/assets/images/cards/' + card + '.png" class="gamecard">');
+  scrap.push(card);
+
+  // set onclick for modal card
   $('#scrapModalCards .gamecard:last').click(function() {
-    //clicking on card in scrap modal returns to forge faceup
-    //todo: 
-    /*todo
-    get card num
-    add card num to deck[]
-    add img to top of deck, replace when drawn in draw function
-    remove from scrapmodal
-    display last card in scrapheapmodal in scrap*/
+    //clicking on card in scrap modal returns to top of forge faceup
+
+    let num = getCardNum($(this) ); // card number
+    deck.push(num); // add to top of deck
+    updateCard('forge', num); // display on top of deck
+    $(this).remove(); // remove from modal
+
+    // remove from scrap arr
+    let idx = scrap.indexOf(num);
+    scrap.splice(idx, 1);
+
+    // display correct card in scrap
+    if(scrap.length==0) {
+      updateCard('scrap', 'none');
+    } else {
+      updateCard('scrap', scrap[scrap.length-1] );
+    }
+
   });
-}
-// scrap functions for modal only
-function removeCardFromScrapModal(elm) {
-  elm.remove();
 }
 
 // returns card number of DOM elm, useful for scrap
 function getCardNum(elm) {
+  console.log(elm);
   let src = elm.prop('src');
   return src.split('cards/')[1].replace('.png','');
 }
 
 // draw card from deck
 function draw() {
-  if(deck.length>0)
+  if(deck.length>0) {
     addCardToHand(deck.pop() );
-  if(deck.length==0)
+    updateCard('forge', 0);
+  }
+  if(deck.length==0) {
     updateCard('forge', 'none');
+  }
 }
 
 // set damage counters on DOM elm

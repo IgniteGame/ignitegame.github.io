@@ -80,9 +80,13 @@
 .energySlot:hover {
 	border-radius: 50%;
 }
-#forge:hover {
+#forge:hover, #hand .gamecard:hover {
 	border: 5px solid #cba12c;
 	border-radius: 18px; /*don't know why this is necessary only on forge*/
+}
+.btn {
+	font-weight: bold;
+	font-size: 120%;
 }
 
 /*modal*/
