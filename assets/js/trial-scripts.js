@@ -53,6 +53,8 @@ $(function() {
 
 // slot is slot1, slot2, slot3, slot4, forge, scrap
 // card is 1-15, or 0 for back, or none for none
+// used only for forge and scrap because others need onclick liteners on the card itself
+// as opposed to the location on board
 function updateCard(slot, card) {
   $('#' + slot).find('img:first').prop('src', '/assets/images/cards/' + card + '.png');
 }
