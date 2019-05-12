@@ -93,6 +93,7 @@ function removeCardFromHand(elm) {
 // given card number, add card to scrap and scrap modal
 function addCardToScrap(card) {
   // add to modal and scrap array
+  console.log(card);
   $('#scrapModalCards').append('<img src="/assets/images/cards/' + card + '.png" class="gamecard">');
   scrap.push(card);
 
@@ -121,7 +122,7 @@ function addCardToScrap(card) {
 
 // returns card number of DOM elm, useful for scrap
 function getCardNum(elm) {
-  console.log(elm);
+  // console.log(elm);
   let src = elm.prop('src');
   return src.split('cards/')[1].replace('.png','');
 }
