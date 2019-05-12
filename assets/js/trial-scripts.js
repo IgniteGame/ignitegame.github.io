@@ -126,7 +126,7 @@ function addCardToScrap(card) {
 function getCardNum(elm) {
   // console.log(elm);
   let src = elm.prop('src');
-  return src.split('cards/')[1].replace('.png','');
+  return src.split('/assets/images/cards/')[1].replace('.png','');
 }
 
 // draw card from deck
