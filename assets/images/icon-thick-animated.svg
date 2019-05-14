@@ -26,8 +26,8 @@ c0,0-5.7-14.3,8.6-20S56.7,4.9,56.7,4.9z"/>
 
 	<animateTransform attributeName="transform"
 	  attributeType="XML"
-	  type="scale"
-	  values=".95; 1.05; .95"
+	  type="translateX"
+	  values="0; -5; 0"
 	  dur="5s"
 	  repeatCount="indefinite"/>
 
