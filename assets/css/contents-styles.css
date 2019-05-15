@@ -12,10 +12,6 @@ p {
   font-size: 125%;
 }
 
-hr {
-  width: 50%;
-}
-
 #gameboard, .gamebox, .gamecard, #rulebook {
   box-shadow: 5px 5px 5px 5px #333;
   margin-left: 40px;

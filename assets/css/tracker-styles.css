@@ -1,0 +1,17 @@
+.tracker-range {
+  width: 100px !important;
+  margin-right: 20px;
+  box-shadow: none;
+}
+.tracker-card {
+  width: 200px;
+  height: 60px;
+  object-fit: cover;
+  object-position: 0% 0%;
+}
+.tracker-card, .tracker-range {
+  display: inline-block !important;
+}
+.tracker-val {
+  margin: 0px;
+}
