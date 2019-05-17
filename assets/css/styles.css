@@ -182,12 +182,15 @@ label {
   font-weight: normal;
   padding: 10px;
 }
-.gamecard {
+.gamecard, .flipcard {
   width: 360px;
   border-radius: 18px;
 }
 .gamecard, #gameboard {
   box-shadow: 5px 5px 5px 5px #333;
+}
+.game-box:hover {
+  box-shadow: 5px 5px 5px 5px #fff; 
 }
 
 /* JUMBOTRON */
@@ -355,6 +358,28 @@ footer a, footer a:hover {
   margin-right: auto;
 }
 
+#botlord-transparent {
+  width: 400px;
+  max-width: 100%;
+}
+
+.game-box {
+    max-width: 100%;
+}
+
+.flipcard {
+  display: inline-block;
+  margin: 25px;
+}
+
+/*copied from contents.html*/
+#a-frame-dice {
+  height: 300px;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
 /*#home-inner-div {
   background: rgba(153, 31, 31, 0) url(../images/artwork/molten-maniac-no-bg.png) no-repeat fixed center;
   background-size: 479px 500px;
@@ -377,10 +402,14 @@ footer a, footer a:hover {
   .navbar {
 	padding:0 10px;
   }
+  .gamecard, .flipcard {
+    width: 270px;
+    border-radius: 13.5px;
+  }
 
 }
 @media screen and (max-width: 768px) { /*small*/
-  #board-transparent {
+  #board-transparent, #a-frame-dice {
     display: none;
   }
   #home-inner-div {
@@ -419,9 +448,9 @@ footer a, footer a:hover {
   .container-fluid:not(.navbar):not(footer) {
     padding: 50px 25px;
   }
-  .gamecard {
+  .gamecard, .flipcard {
     width: 180px;
-    border-radius: 13.5px;
+    border-radius: 9px;
   }
   #info-left, #info-right {
 	  text-align: center;

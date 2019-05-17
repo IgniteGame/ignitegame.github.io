@@ -4,12 +4,13 @@ active: Home
 ---
 
 <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
 
 <script src="{{ site.baseurl }}/assets/js/scripts.js"></script>
 
 <div id="home" class="jumbotron text-center">
   <div id="home-inner-div">
-    <h1><img class="logo logo-game" src="{{ site.baseurl }}/assets/images/icon-thick.svg" onerror="this.onerror=null;this.src='{{ site.baseurl }}/assets/images/icon-thick.png';"><b>IGNITE</b></h1>
+    <h1><img class="logo logo-game" src="{{ site.baseurl }}/assets/images/icon-thick.svg" onerror="this.onerror=null;this.src='{{ site.baseurl }}/assets/images/icon-thick.png';"><b>IGNITE CARDS</b></h1>
 
 <!--     <div>
       <img  title="Molten Maniac Card Artwork" id="molten-man" class="slideanim slideSideways" src="{{ site.baseurl }}/assets/images/artwork/molten-maniac-no-bg-blur.png">
@@ -47,9 +48,7 @@ active: Home
   </form>  
   </div>
 </div> 
-<div class="bg-white">
-  <img id="board-transparent" src="{{ site.baseurl }}/assets/images/board/board-art-transparent-bottom.png" style="width: 100%;">
-</div>
+
 <!--
 <h2 class="text-center"><span class="glyphicon glyphicon-star"></span> REVIEWS</h2>
 <div id="reviewCarousel" class="carousel slide text-center" data-ride="carousel">
@@ -85,15 +84,13 @@ active: Home
     <div class="col-lg-8">
       <h2><i class="fas fa-info-circle"></i> ABOUT</h2>
       <h4><b style="color:#991f1f;">IGNITE</b> is a fast-paced game where you race to destroy opposing forges by commanding your minions to ignite, attack, and combo your way to victory!</h4>
-<!--       <img title="Molten Maniac Card Artwork" id="molten-man" class="slideanim slideSideways" src="{{ site.baseurl }}/assets/images/artwork/molten-maniac-no-bg.png"> -->
-
-      <p>Become a Forgemaster and command an army of <b>bots</b> and <b>forgelings</b> and destroy your opponent’s <b>forge</b> <img src="{{ site.baseurl }}/assets/images/game-icons/icon-forge.svg" width="24px"> before they destroy yours! In Ignos, <b>magical forges</b> leftover from wars past are scattered around the land. Use your forge’s <b>energy</b> <img src="{{ site.baseurl }}/assets/images/game-icons/icon-energy.svg" width="24px"> to <b>summon minions</b> to attack, defend, and <b>ignite</b> <img src="{{ site.baseurl }}/assets/images/game-icons/icon-flame.svg" width="24px"> for you. Set up your forgeling to tinker with your bots to produce insane combos. You'll need your forgelings' mechanical skills and the luck of random ignitions to destroy and conquer your opponent’s forge in this quick, action packed game.</p>
+      <img title="Botlord Card Artwork" id="botlord-transparent" class="slideanim slideSideways center" src="{{ site.baseurl }}/assets/images/artwork/botlord-no-bg.png">
     </div>
     <div class="col-lg-4 text-center">
       
       <div class="flipcard">
         <div class="front">
-          <img title="Blast Bot" class="gamecard slideanim" src="{{ site.baseurl }}/assets/images/cards/2.png">
+          <img title="Spark Bot" class="gamecard slideanim" src="{{ site.baseurl }}/assets/images/cards/1.png">
         </div>
         <div class="back">
       	  <img title="Ignite Card Back" id="card-back" class="gamecard slideanim" src="{{ site.baseurl }}/assets/images/cards/0.svg">
@@ -102,43 +99,159 @@ active: Home
 
     </div>
   </div>
+
+  <p>Become a Forgemaster and command an army of <b>bots</b> and <b>forgelings</b> and destroy your opponent’s <b>forge</b> <img src="{{ site.baseurl }}/assets/images/game-icons/icon-forge.svg" width="24px"> before they destroy yours! In Ignos, <b>magical forges</b> leftover from wars past are scattered around the land. Use your forge’s <b>energy</b> <img src="{{ site.baseurl }}/assets/images/game-icons/icon-energy.svg" width="24px"> to <b>summon minions</b> to attack, defend, and <b>ignite</b> <img src="{{ site.baseurl }}/assets/images/game-icons/icon-flame.svg" width="24px"> for you. Set up your forgeling to tinker with your bots to produce insane combos. You'll need your forgelings' mechanical skills and the luck of random ignitions to destroy and conquer your opponent’s forge in this quick, action packed game.</p>
+
 </div>
 
-<div id="gameplay" class="container-fluid bg-white">
-  <div class="row">
-	<div class="col-lg-4 text-center">
-   <div class="flipcard">
-    <div class="front">
-      <img title="Detonation Master" class="gamecard slideanim" src="{{ site.baseurl }}/assets/images/cards/13.png">
+<div id="board" class="container-fluid bg-white">
+
+      <h2><i class="fas fa-chess-pawn"></i> BOARD</h2>
+
+  <!-- https://www.smashingmagazine.com/2014/11/styling-and-animating-svgs-with-css/ -->
+  <figure id="board-transparent"><object type="image/svg+xml" data="{{ site.baseurl }}/assets/images/board/board-transparent-image-trace-hover.svg" style="width: 100%;"><!-- fallback here --></object></figure>
+
+      <p><b>Forge:</b> If your forge <img src="{{ site.baseurl }}/assets/images/game-icons/icon-forge.svg" width="24px"> is destroyed, you lose, and the last one standing wins! You control a forge of 30 minions to battle for you. When your forge takes damage, simply remove that many cards from it. When you run out of cards in your forge and take damage, you lose.</p>
+      <p><b>Scrapheap:</b> Your scrapheap <img src="{{ site.baseurl }}/assets/images/game-icons/icon-nut.svg" width="24px"> is where your destroyed cards go, and your capacitor is where you keep your energy <img src="{{ site.baseurl }}/assets/images/game-icons/icon-energy.svg" width="24px"></p>
+
+      <img title="Ignite Game Board" id="gameboard" class="slideanim slideSideways center" src="{{ site.baseurl }}/assets/images/board/board.png">
+      
+      <p><b>Capacitor:</b> Players gain energy <img src="{{ site.baseurl }}/assets/images/game-icons/icon-energy.svg" width="24px"> each turn to summon minions from their hand or draw cards. Minions have energy costs on the top left of the card, and each card drawn costs 1 energy. At the start of your turn, your capacitor charges up to 4 energy. The first turn of the game starts with 2 energy.</p>
+
+      <p><b>Lineup:</b> Your lineup is at the top of your board, and it has four numbered slots to summon minions. Minions can be summoned to any open slot.</p>
+
+      <p><b>Hand:</b> Your hand is where you keep minions ready to be summoned. It's hidden from other players. At the start of the game, you draw 5 cards.</p>
+
+</div>
+
+<div id="cards" class="container-fluid bg-grey">
+
+  <h2><i class="fas fa-robot"></i> CARDS</h2>
+
+  <div class="row text-center">
+    <div class="col-md-4">
+      <div class="flipcard">
+        <div class="front">
+          <img title="Blast Bot" class="gamecard slideanim" src="{{ site.baseurl }}/assets/images/cards/2.png">
+        </div>
+        <div class="back">
+          <img title="Ignite Card Back" id="card-back" class="gamecard slideanim" src="{{ site.baseurl }}/assets/images/cards/0.svg">
+        </div>
+      </div>
     </div>
-    <div class="back">
-      <img title="Ignite Card Back" id="card-back" class="gamecard slideanim" src="{{ site.baseurl }}/assets/images/cards/0.svg">
+    <div class="col-md-4">
+      <div class="flipcard">
+        <div class="front">
+          <img title="Detonation Master" class="gamecard slideanim" src="{{ site.baseurl }}/assets/images/cards/13.png">
+        </div>
+        <div class="back">
+          <img title="Ignite Card Back" id="card-back" class="gamecard slideanim" src="{{ site.baseurl }}/assets/images/cards/0.svg">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="flipcard">
+        <div class="front">
+          <img title="Demolition Bot" class="gamecard slideanim" src="{{ site.baseurl }}/assets/images/cards/9.png">
+        </div>
+        <div class="back">
+          <img title="Ignite Card Back" id="card-back" class="gamecard slideanim" src="{{ site.baseurl }}/assets/images/cards/0.svg">
+        </div>
+      </div>
     </div>
   </div>
-  </div>
-    <div class="col-lg-8">
-      <h2><i class="fas fa-chess-pawn"></i> GAMEPLAY</h2>
-      <p>Players gain energy <img src="{{ site.baseurl }}/assets/images/game-icons/icon-energy.svg" width="24px"> each turn to summon minions from their hand. Ignites can hit your opponent’s minions or their forge <img src="{{ site.baseurl }}/assets/images/game-icons/icon-forge.svg" width="24px">. When a player runs out of cards in their forge <img src="{{ site.baseurl }}/assets/images/game-icons/icon-forge.svg" width="24px">, they lose.</p>
-	  <p>Each player is equipped with a 30 card forge <img src="{{ site.baseurl }}/assets/images/game-icons/icon-forge.svg" width="24px"> full of minions. All minions have an energy cost <img src="{{ site.baseurl }}/assets/images/game-icons/icon-energy.svg" width="24px">, attack <img src="{{ site.baseurl }}/assets/images/game-icons/icon-wrench.svg" width="24px"> and health <img src="{{ site.baseurl }}/assets/images/game-icons/icon-gear.svg" width="24px">, shown by lightning, wrench, and gear symbols respectively. Bots also have three ignite values shown in flaming stones.</p>
-    <p>When you <b style="color:#991f1f;">IGNITE</b>, you roll two six-sided dice (try it <a href="{{ site.baseurl }}/roller/" target="_blank">here</a>). One die determines which target you hit and the other how much damage you deal, corresponding to the ignite values on the card. <img src="{{ site.baseurl }}/assets/images/game-icons/icon-flame.svg" width="24px"> When minions attack, they deal damage equal to their attack value, can take damage equal to their health until they are destroyed. Minion's also have their attack reduced by the amount of damage they have taken.</p>
-    <p>When a player takes damage they remove that many cards from their forge and place them into their scrapheap <img src="{{ site.baseurl }}/assets/images/game-icons/icon-nut.svg" width="24px">. The scrapheap is also where destroyed minions go. Your forge is filled with bots that ignite and forgelings (curious, evil gremlin creatures) that love tinkering with your bots. By attacking and igniting, you can destroy your opponent's minions and destroy their forge and win the game!</p>
-    </div>
 
-    <img title="Ignite Game Board" id="gameboard" class="slideanim slideSideways center" src="{{ site.baseurl }}/assets/images/board/board.png">
+  <p>Your forge is filled with bots that ignite and forgelings (curious, evil gremlin creatures) that love tinkering with your bots. By attacking, igniting, and combining your cards, you can destroy your opponent's minions, destroy their forge and win the game!</p>
+  
+  <p><b>Parts:</b> All minions have an energy cost <img src="{{ site.baseurl }}/assets/images/game-icons/icon-energy.svg" width="24px">, attack <img src="{{ site.baseurl }}/assets/images/game-icons/icon-wrench.svg" width="24px"> and health <img src="{{ site.baseurl }}/assets/images/game-icons/icon-gear.svg" width="24px">, shown by lightning, wrench, and gear symbols respectively. Bots also have three ignite values shown in flaming stones.<img src="{{ site.baseurl }}/assets/images/diagrams/ignite-vals.png" width="96px"></p>
 
-    <p>Players start the game with 5 cards, and start their turns with 4 energy <img src="{{ site.baseurl }}/assets/images/game-icons/icon-energy.svg" width="24px">. There are two parts of a turn: attacking and summoning. During attacking, players can attack any target with one exception: that player's Forge Guardian <img src="{{ site.baseurl }}/assets/images/game-icons/icon-shield.svg" width="24px"> (minion on slot 1) must be attacked and destroyed first. During summoning, that player can spend energy to draw cards (1 energy per card) or summon minions. The first turn of the game starts with only 2 energy.</p>
+  <p><b>Attacking:</b> When a minion attacks a forge, it deals damage to that forge equal to its attack. When a minion attacks another minion, they each deal damage to each other equal to their attack <img src="{{ site.baseurl }}/assets/images/game-icons/icon-wrench.svg" width="24px"> and if they have more damage than health <img src="{{ site.baseurl }}/assets/images/game-icons/icon-gear.svg" width="24px">, they are destroyed. Damage reduces health AND attack, and is represented by damage counters:</p>
 
-    <p>Ignite scales great with more players! Players simply sit in a circle, can only attack adjacent players, and ignites <img src="{{ site.baseurl }}/assets/images/game-icons/icon-flame.svg" width="24px"> hit BOTH players! Get ready for some chaotic fun!</p>
+<div class="text-center">
+  <img src="{{ site.baseurl }}/assets/images/tokens/damage-1.png" width="72px">
+  <img src="{{ site.baseurl }}/assets/images/tokens/damage-2.png" width="72px">
+  <img src="{{ site.baseurl }}/assets/images/tokens/damage-3.png" width="72px">
+</div>
 
-    <img class="center" src="{{ site.baseurl }}/assets/images/box/box-front.png" width="600px"> <p>$20 The Game &mdash; 2 Boards, 2 30 card Ignite Decks, 8 Energy Counters, 12 Damage Counters, 1 Turn Tracker, 2 Ignite Dice, Rulebook &mdash; Includes everything you need for two players, or to add two more players</p>
-    <img class="center" src="{{ site.baseurl }}/assets/images/box/box-front-bundle.png" width="600px"> <p>$35 Blast Pack &mdash; Includes 4 boards, 4 30 card Ignite Decks, 16 Energy Counters, 24 Damage Counters, 2 Turn Trackers, 4 Ignite Dice, Rulebook &mdash; Includes everything you need for four players, or to add four more players</p>
+<p><b>Abilities:</b> Minions with Summon abilities have those abilities occur after they are summoned, and minions with Scrap abilities have those abilities occur after they are destroyed from your lineup.</p>
+
+<p><b>Turns:</b> There are two parts of your turn: attacking and building. When you attack, you can choose any number of your minions to attack any opposing target (minion or forge) with one exception: you must attack and destroy their Forge Guardian <img src="{{ site.baseurl }}/assets/images/game-icons/icon-shield.svg" width="24px"> (minion on slot 1) before attacking any other target. During building, you spend energy to summon minions and draw cards.</p>
+
+</div>
+<div id="igniting" class="container-fluid bg-white">
+
+  <h2><i class="fas fa-cube"></i> IGNITING</h2>
+
+<!-- a-frame dice, copied and modified from contents.html -->
+<div id="a-frame-dice">
+  <a-scene embedded loading-screen="dotsColor: #991f1f; backgroundColor: #333"
+  vr-mode-ui="enabled: false">
+    <!-- images -->
+    <a-assets>
+      <img id="dice-forge" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/dice/3d/forge.svg">
+      <img id="dice-1" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/dice/3d/slot 1.svg">
+      <img id="dice-2" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/dice/3d/slot 2.svg">
+      <img id="dice-3" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/dice/3d/slot 3.svg">
+      <img id="dice-4" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/dice/3d/slot 4.svg">
+      <img id="dice-small" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/dice/3d/small explosion.svg">
+      <img id="dice-medium" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/dice/3d/medium explosion.svg">
+      <img id="dice-large" crossorigin="anonymous" src="{{ site.baseurl }}/assets/images/dice/3d/large explosion.svg">
+    </a-assets>
+
+    <!-- the dice -->
+    <a-entity rotation="0 0 0" position="-1.5 0 -2" scale="3 3 3"
+    animation="property: rotation; from: 0 0 0; to: 0 360 360; loop: true; dur: 3000; easing: linear">
+    <!-- front and back -->
+      <a-image src="#dice-forge" position="0 0 0" rotation="0 0 0" width="0.315" height="0.315"></a-image>
+      <a-image src="#dice-forge" position="0 0 -0.315" rotation="0 0 0" width="0.315" height="0.315"></a-image>
+      <!-- left and right -->
+      <a-image src="#dice-1" position="-0.1575 0 -0.1575" rotation="0 90 90" width="0.315" height="0.315"></a-image>
+      <a-image src="#dice-4" position="0.1575 0 -0.1575" rotation="0 90 90" width="0.315" height="0.315"></a-image>
+      <!-- top and bottom -->
+      <a-image src="#dice-2" position="0 0.1575 -0.1575" rotation="-90 180 0" width="0.315" height="0.315"></a-image>
+      <a-image src="#dice-3" position="0 -0.1575 -0.1575" rotation="-90 180 0" width="0.315" height="0.315"></a-image>
+    </a-entity>
+    <!-- right die -->
+    <a-entity rotation="0 0 0" position="1.5 0 -2" scale="3 3 3"
+    animation="property: rotation; from: 0 0 0; to: 0 360 360; loop: true; dur: 3000; easing: linear">
+    <!-- front and back -->
+      <a-image src="#dice-large" position="0 0 0" rotation="0 0 0" width="0.315" height="0.315"></a-image>
+      <a-image src="#dice-large" position="0 0 -0.315" rotation="0 0 0" width="0.315" height="0.315"></a-image>
+      <!-- left and right -->
+      <a-image src="#dice-medium" position="-0.1575 0 -0.1575" rotation="0 90 90" width="0.315" height="0.315"></a-image>
+      <a-image src="#dice-large" position="0.1575 0 -0.1575" rotation="0 90 90" width="0.315" height="0.315"></a-image>
+      <!-- top and bottom -->
+      <a-image src="#dice-small" position="0 0.1575 -0.1575" rotation="-90 180 0" width="0.315" height="0.315"></a-image>
+      <a-image src="#dice-small" position="0 -0.1575 -0.1575" rotation="-90 180 0" width="0.315" height="0.315"></a-image>
+    </a-entity>
+
+    <!-- <a-sky color="#333"></a-sky> -->
+
+    <!-- <a-entity rotation="0 -15 0"> -->
+      <a-camera look-controls-enabled="false" wasd-controls-enabled="false" position="0 0 1"></a-camera>
+    <!-- </a-entity> -->
+
+  </a-scene>
+</div>
+
+
+    <p>When you <b style="color:#991f1f;">IGNITE</b>, you roll the two ignite dice (try it <a href="{{ site.baseurl }}/roller/" target="_blank">here</a>). One die determines which target you hit and the other determines how much damage you deal. The target can be either slot 1-4, or forge. The damage dealt corresponds to the ignite values on the bot igniting. <img src="{{ site.baseurl }}/assets/images/diagrams/ignite-vals.png" width="96px"></p>
+
+</div>
+<div class="container-fluid bg-grey">
+
+    <p><b>Multiplayer:</b> Ignite scales great with more players! Players simply sit in a circle, can only attack adjacent players, and ignites <img src="{{ site.baseurl }}/assets/images/game-icons/icon-flame.svg" width="24px"> hit BOTH players! Get ready for some chaotic fun!</p>
+
+    <h2><i class="fas fa-box"></i> THE BOX</h2>
+
+    <img class="center game-box" src="{{ site.baseurl }}/assets/images/box/box-front.png" width="600px"> <p>$20 The Game &mdash; 2 Boards, 2 30 card Ignite Decks, 8 Energy Counters, 12 Damage Counters, 1 Turn Tracker, 2 Ignite Dice, Rulebook &mdash; Includes everything you need for two players, or to add two more players</p>
+    <img class="center game-box" src="{{ site.baseurl }}/assets/images/box/box-front-bundle.png" width="600px"> <p>$35 Blast Pack &mdash; Includes 4 boards, 4 30 card Ignite Decks, 16 Energy Counters, 24 Damage Counters, 2 Turn Trackers, 4 Ignite Dice, Rulebook &mdash; Includes everything you need for four players, or to add four more players</p>
     <hr>
 
-    <p class="text-center">What next? View all of the cards in the <a href="{{ site.baseurl }}/cards/"><i class="fas fa-images"></i> GALLERY</a> or check out the <a href="{{ site.baseurl }}/contents/"><i class="fas fa-gift"></i> CONTENTS</a> of what's in the box.</p>
+    <p class="text-center">What next? View all of the cards in the <a href="{{ site.baseurl }}/cards/"><i class="fas fa-images"></i> GALLERY</a> or check out a detailed review of the <a href="{{ site.baseurl }}/contents/"><i class="fas fa-gift"></i> CONTENTS</a> of the game.</p>
 
     <p class="text-center">Why are we so special? Check out our <a href="{{ site.baseurl }}/goals/"><i class="fas fa-medal"></i> GOALS</a></p>
 
-  </div>
 </div>
 
 <!-- <div id="contact" class="container-fluid bg-grey text-center">
