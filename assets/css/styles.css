@@ -52,15 +52,9 @@ i {
   }
 }
 
-
 /*.page-scroll {
   margin: 0px !important;
 }*/
-
-.logo-rgb {
-  margin-top: 12px;
-  height: 64px;
-}
 
 .form-control::-webkit-input-placeholder { color: #999; }  /* WebKit, Blink, Edge */
 .form-control:-moz-placeholder { color: #999; }  /* Mozilla Firefox 4 to 18 */
@@ -386,6 +380,9 @@ footer a, footer a:hover {
 
 }
 @media screen and (max-width: 768px) { /*small*/
+  #board-transparent {
+    display: none;
+  }
   #home-inner-div {
     background-image: none;
     animation: none;
