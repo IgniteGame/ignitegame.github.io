@@ -189,9 +189,9 @@ label {
 .gamecard, #gameboard {
   box-shadow: 5px 5px 5px 5px #333;
 }
-.game-box:hover {
+/*.game-box:hover {
   box-shadow: 5px 5px 5px 5px #fff; 
-}
+}*/
 
 /* JUMBOTRON */
 .jumbotron {
