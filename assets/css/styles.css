@@ -352,6 +352,9 @@ footer a, footer a:hover {
 #gameboard {
   width: 600px;
 }
+.dice {
+  width: 100px;
+}
 .center {
   display: block;
   margin-left: auto;
