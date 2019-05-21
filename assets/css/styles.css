@@ -373,6 +373,8 @@ footer a, footer a:hover {
 .flipcard {
   display: inline-block;
   margin: 25px;
+/*  margin-left: 0px;
+  margin-right: 0px;*/
 }
 
 /*copied from contents.html*/

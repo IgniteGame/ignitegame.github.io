@@ -7,6 +7,10 @@ $(function() {
     trigger: 'click'
   });
 
+  // $('.flip-card').click(function() {
+  //   $(this).toggleClass('active');
+  // });
+
   $(".fa-envelope").hover(
     function(){ 
    	  $(this).addClass("fa-envelope-open"); 
