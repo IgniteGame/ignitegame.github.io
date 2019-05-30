@@ -10,6 +10,11 @@
     "icon": "fab fa-twitter"
   },
   {
+    "name": "Instagram",
+    "url": "https://www.instagram.com/ignitecards",
+    "icon": "fab fa-instagram"
+  },
+  {
     "name": "YouTube",
     "url": "https://www.youtube.com/channel/UC-yp5arUJMH2GeDmY12h6ZA",
     "icon": "fab fa-youtube"
