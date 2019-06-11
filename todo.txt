@@ -1,5 +1,4 @@
 TODO
-add about us
 add rules
 add slide animations to contents.html, add 3d models for dice and others to contents
 add artwork of blastbot popping out of the gameboard to main page or contents.html?
@@ -18,9 +17,6 @@ add licence/copyright
 add links section for socials, as well as BGG
 https://boardgamegeek.com/boardgame/281467/ignite-cards
 
-add credit section for us and:
-Artwork by Thien Nguyen, Game Photography by Richard Aaron (http://richardaaronphotography.com), Audio Recording by Nick Watt, Music by Purple Planet.
-also fontawesome icons and roboto font
 
 then add what's in the box, link to read the rules
 about us where it explains who we are and how we've been designing ignite
@@ -35,13 +31,12 @@ update BASE with art images and newer stats
 display all in a grid
 draw sample hand
 search for cards (name, text, etc)
-deck stats (mana curve with bots and non bots)
+deck stats (energy curve with bots and non bots)
 
 
 FINALIZED SITE:
 front page: box cover image, link to kickstarter, live goal progress?, video trailer
 below front page: reviews carousel, maybe some thing people tweeted with #ignitegame tag
-about us: article: who each of us are, fund to help us pursue our passion
 contents: whats in the boxes, the prices, and the tech specs on materials and dimens
 videos: link to all 3 (4?) videos: trailer, how to play, what we're doing different, (example game?)
 about the game: article on why the game is fun, what we're doing different, with video embed
