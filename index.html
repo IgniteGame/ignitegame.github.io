@@ -11,13 +11,25 @@ active: Home
 
 <div id="home" class="jumbotron text-center">
   <div id="home-inner-div">
-    <h1><img class="logo logo-game" src="{{ site.baseurl }}/assets/images/icon-thick.svg" onerror="this.onerror=null;this.src='{{ site.baseurl }}/assets/images/icon-thick.png';"><b>IGNITE</b></h1>
+    <h1><img class="logo logo-game" src="{{ site.baseurl }}/assets/images/icon-thick.svg" onerror="this.onerror=null;this.src='{{ site.baseurl }}/assets/images/icon-thick.png';"><b>IGNITE</b>
+      <p id="slogan-p"><i>A game of crazy combos and epic explosions</i></p> 
+    </h1>
 
 <!--     <div>
       <img  title="Molten Maniac Card Artwork" id="molten-man" class="slideanim slideSideways" src="{{ site.baseurl }}/assets/images/artwork/molten-maniac-no-bg-blur.png">
     </div> -->
 
-    <p><i>A game of crazy combos and epic explosions</i></p>  
+     
+
+
+    <img id="box-img-btn" src="{{ site.baseurl }}/assets/images/box/box-front.png"
+      onclick="window.open('https://www.kickstarter.com/projects/ignitecards/1956773949?ref=841475&token=c1c8bd67');">
+    <br><br>
+    <button class="btn btn-lg btn-red" onclick="window.open('https://www.kickstarter.com/projects/ignitecards/1956773949?ref=841475&token=c1c8bd67');">
+      <span class="fab fa-kickstarter"></span> Back us on Kickstarter!
+    </button>
+    <p style="color:#cba029;"><i>Help make our dream a reality <span class="fa fa-arrow-up"></span> It would mean a lot to all of us. </i></p>
+
   
     <div class="row">
       <div class="col-lg-2 col-sm-0"></div>
@@ -29,12 +41,12 @@ active: Home
       </div>
       <div class="col-lg-2 col-sm-0"></div>
     </div>
-<!--
-  <button type="button" id="backUsButton" class="btn btn-default"><span class="fab fa-kickstarter"></span> Back us on Kickstarter!</button>
-  <p style="color:#cba029;"><i>Help make our dream a reality <span class="fa fa-arrow-up"></span> It's cheaper than retail! </i></p>
--->
 
-  <p>Enter your email below to get notified when the Kickstarter launches <small>(coming June 2019)</small></p>
+
+
+
+
+  <p>Enter your email below to get updates about Kickstarter</p>
   <form class="form-inline" action="https://docs.google.com/forms/d/e/1FAIpQLSepBUgalIwHGdRnOgiDSGm8gTxbfPRXkCFMCCXyXV-a2fhpoQ/formResponse" method="post" target="no-target">
     <div class="input-group">
       <input autofocus id="subscribeEmail" name="emailAddress" type="email" class="form-control" title="get notificed when our kickstarter launches" size="50" placeholder="Email Address" required>
@@ -183,19 +195,21 @@ active: Home
 
   <h2><i class="fas fa-cube"></i> IGNITING</h2>
 
-  <img class="dice" src="{{ site.baseurl }}/assets/images/dice/slot 1.svg">
-  <img class="dice" src="{{ site.baseurl }}/assets/images/dice/slot 2.svg">
-  <img class="dice" src="{{ site.baseurl }}/assets/images/dice/slot 3.svg">
-  <img class="dice" src="{{ site.baseurl }}/assets/images/dice/slot 4.svg">
-  <img class="dice" src="{{ site.baseurl }}/assets/images/dice/forge.svg">
-  <img class="dice" src="{{ site.baseurl }}/assets/images/dice/forge.svg">
-  <br>
-  <img class="dice" src="{{ site.baseurl }}/assets/images/dice/small explosion.svg">
-  <img class="dice" src="{{ site.baseurl }}/assets/images/dice/small explosion.svg">
-  <img class="dice" src="{{ site.baseurl }}/assets/images/dice/medium explosion.svg">
-  <img class="dice" src="{{ site.baseurl }}/assets/images/dice/medium explosion.svg">
-  <img class="dice" src="{{ site.baseurl }}/assets/images/dice/large explosion.svg">
-  <img class="dice" src="{{ site.baseurl }}/assets/images/dice/large explosion.svg">
+  <div id="dice-div" class="center" style="margin: auto !important; text-align: center !important"> <!--yes im trying really hard to center this thing-->
+    <img class="dice" src="{{ site.baseurl }}/assets/images/dice/slot 1.svg">
+    <img class="dice" src="{{ site.baseurl }}/assets/images/dice/slot 2.svg">
+    <img class="dice" src="{{ site.baseurl }}/assets/images/dice/slot 3.svg">
+    <img class="dice" src="{{ site.baseurl }}/assets/images/dice/slot 4.svg">
+    <img class="dice" src="{{ site.baseurl }}/assets/images/dice/forge.svg">
+    <img class="dice" src="{{ site.baseurl }}/assets/images/dice/forge.svg">
+    <br>
+    <img class="dice" src="{{ site.baseurl }}/assets/images/dice/small explosion.svg">
+    <img class="dice" src="{{ site.baseurl }}/assets/images/dice/small explosion.svg">
+    <img class="dice" src="{{ site.baseurl }}/assets/images/dice/medium explosion.svg">
+    <img class="dice" src="{{ site.baseurl }}/assets/images/dice/medium explosion.svg">
+    <img class="dice" src="{{ site.baseurl }}/assets/images/dice/large explosion.svg">
+    <img class="dice" src="{{ site.baseurl }}/assets/images/dice/large explosion.svg">
+  </div>
 
 <!-- a-frame dice, copied and modified from contents.html -->
 <!-- <div id="a-frame-dice">
