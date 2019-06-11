@@ -15,6 +15,10 @@ add digital downloads
 add media downloads
 add licence/copyright
 
+add credit section for us and:
+Artwork by Thien Nguyen, Game Photography by Richard Aaron (http://richardaaronphotography.com), Audio Recording by Nick Watt, Music by Purple Planet.
+also fontawesome icons and roboto font
+
 then add what's in the box, link to read the rules
 about us where it explains who we are and how we've been designing ignite
 what we're doing differently section with link to read at top of front page
