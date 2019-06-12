@@ -32,7 +32,7 @@ i {
 #home-inner-div {
   /*https://davidwalsh.name/background-animation-css*/
   background-image: url(../images/artwork/molten-maniac-cropped-transparent.png);
-  background-position: 0% 40%;
+  background-position: 0% 5%;
   background-repeat: no-repeat;
   animation: animatedBackground 1.5s ease-in 1;
   background-color: rgba(51,51,51,0.2);
@@ -41,13 +41,17 @@ i {
   text-shadow: 4px 4px 4px #333;
 }
 
+#slogan-p {
+  margin: 0;
+}
+
 @keyframes animatedBackground {
   from {
-    background-position: 2000px 40%;
+    background-position: 2000px 5%;
     opacity: 0;
   }
   to {
-    background-position: 0% 40%;
+    background-position: 0% 5%;
     opacity: 1;
   }
 }
@@ -397,6 +401,14 @@ footer a, footer a:hover {
   top: 120px;
 }*/
 
+#box-img-btn {
+  width: 600px;
+  box-shadow: 10px 10px 10px #333;
+}
+#box-img-btn:hover {
+  box-shadow: 10px 10px 10px #ccc;
+  cursor: pointer;
+}
 
 /* @MEDIA */
 @media screen and (max-width: 1280px) {
@@ -410,6 +422,9 @@ footer a, footer a:hover {
   .gamecard, .flipcard {
     width: 270px;
     border-radius: 13.5px;
+  }
+  #box-img-btn {
+    width: 600px;
   }
 
 }
@@ -469,6 +484,12 @@ footer a, footer a:hover {
   }
   nav li.dropdown {
     display: block !important;
+  }
+  #box-img-btn {
+    width: 80%;
+  }
+  .dice {
+    width: 50px;
   }
 }
   
