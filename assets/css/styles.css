@@ -29,22 +29,15 @@ i {
 /*#home {
   background: #991f1f url(../images/board/board-art-small.png) no-repeat fixed center;;
 }*/
-#home-inner-div {
-  /*https://davidwalsh.name/background-animation-css*/
+
+/*https://davidwalsh.name/background-animation-css*/
+/*#home-inner-div {  
   background-image: url(../images/artwork/molten-maniac-cropped-transparent.png);
   background-position: 0% 5%;
   background-repeat: no-repeat;
   animation: animatedBackground 1.5s ease-in 1;
   background-color: rgba(51,51,51,0.2);
 }
-#home-inner-div p {
-  text-shadow: 4px 4px 4px #333;
-}
-
-#slogan-p {
-  margin: 0;
-}
-
 @keyframes animatedBackground {
   from {
     background-position: 2000px 5%;
@@ -54,7 +47,18 @@ i {
     background-position: 0% 5%;
     opacity: 1;
   }
+}*/
+
+
+#home-inner-div p {
+  text-shadow: 4px 4px 4px #333;
 }
+
+#slogan-p {
+  margin: 0;
+}
+
+
 
 /*.page-scroll {
   margin: 0px !important;
