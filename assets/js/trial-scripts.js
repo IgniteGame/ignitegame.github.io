@@ -8,6 +8,7 @@ $(function() {
   });
 
   $('#toggleHandBtn').click(toggleHand); // toggle hand with btn
+  $('#damageBtn').click(takeDamage);
 
   // clicking on lineup with card in hand selected moves it
   $('.lineup.slot').click(function() {
@@ -26,7 +27,10 @@ $(function() {
       }
       addCardToScrap(getCardNum($('.gamecard.active') ) ); // add to scrap modal
       setDmg($('.gamecard.active'), 0); // remove damage
-      $(this).html($('.gamecard.active') ); // complete the move
+
+      $(this).html($('.gamecard.active').off() ); // complete the move (off function removes listeners)
+      // remove listeners so that clicking scrap to add a card doesn't trigger function again for clicking on card inside scrap and therefore open scrap modal
+
       $('.gamecard').removeClass('active'); // remove active class
     }
     else { // if no active card to move to scrap, open return from scrap modal
@@ -65,6 +69,18 @@ function toggleHand() {
     $('#hand').css('visibility', 'hidden');
   else
     $('#hand').css('visibility', '');
+}
+
+function takeDamage() { // similar to draw() function
+  // remove 1 card from forge to scrap
+  if(deck.length>0) {
+    addCardToScrap(deck.pop() );
+    updateCard('scrap', scrap[scrap.length-1] );
+    updateCard('forge', 0); // not necessairly, might be another revealed card...
+  }
+  if(deck.length==0) {
+    updateCard('forge', 'none');
+  }
 }
 
 // add card number to hand
@@ -133,7 +149,7 @@ function getCardNum(elm) {
 function draw() {
   if(deck.length>0) {
     addCardToHand(deck.pop() );
-    updateCard('forge', 0);
+    updateCard('forge', 0); // not necessairly, might be another revealed card...
   }
   if(deck.length==0) {
     updateCard('forge', 'none');
@@ -152,6 +168,10 @@ function getDmg(elm) {
     return src.charAt(src.length-5); // 4 last chars are '.png'    
   }
   return 0;
+}
+
+function updateCardCount() { // todo: call this function in many other functions
+  $('#cardCount').html(deck.length + ' cards left');
 }
 
 // set value in dropdown in modal
